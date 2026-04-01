@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Go - Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 36px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p { margin-bottom: 14px; }
+        ul, ol {
+            margin: 8px 0 14px 24px;
+        }
+        ul { list-style: disc; }
+        ol { list-style: decimal; }
+        li { margin-bottom: 6px; }
+        a { color: #4285f4; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        .lang-switcher a {
+            margin-left: 12px;
+            padding: 4px 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            color: #495057;
+            text-decoration: none;
+        }
+        .lang-switcher a:hover, .lang-switcher a.active {
+            background: #4285f4;
+            color: #fff;
+            border-color: #4285f4;
+        }
+        .section { display: none; }
+        .section.active { display: block; }
+        .faq-item {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+        }
+        .faq-item strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #1a1a2e;
+        }
+        .faq-item p { margin-bottom: 0; color: #555; }
+        .contact-card {
+            background: #e8f4fd;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 24px;
+        }
+        .contact-card p { margin-bottom: 8px; }
+        .nav-links {
+            margin-top: 16px;
+            font-size: 14px;
+        }
+        .nav-links a {
+            margin-right: 16px;
+        }
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #dee2e6;
+            font-size: 13px;
+            color: #6c757d;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a href="#" onclick="switchLang('en')" id="btn-en" class="active">English</a>
+            <a href="#" onclick="switchLang('zh')" id="btn-zh">中文</a>
+            <a href="#" onclick="switchLang('ja')" id="btn-ja">日本語</a>
+        </div>
+
+        <!-- English -->
+        <div id="lang-en" class="section active">
+            <h1>Lumina Go Support</h1>
+            <p class="subtitle">BLE wireless remote control for projectors</p>
+
+            <h2>About</h2>
+            <p>Lumina Go turns your iPhone into a full-featured wireless remote for BLE-enabled projectors. Control navigation, volume, focus, keyboard input and mouse cursor — all via Bluetooth Low Energy.</p>
+
+            <h2>Getting Started</h2>
+            <ol>
+                <li>Ensure your projector is powered on and the BLE receiver service is running.</li>
+                <li>Open Lumina Go on your iPhone and grant Bluetooth permission.</li>
+                <li>Tap <strong>Start Scan</strong> to search for nearby projectors.</li>
+                <li>When a projector is found, tap to connect (or wait for auto-connect if only one device is found).</li>
+                <li>Use the four tabs to control your projector: Remote, Touchpad, Keyboard, and Text Input.</li>
+            </ol>
+
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Remote Control</strong> — D-Pad navigation, OK, Back, Home, Menu, volume, focus, and input source.</li>
+                <li><strong>Touchpad</strong> — Move the cursor, tap to click, two-finger right-click and scroll. Adjustable speed (0.5x–3.0x).</li>
+                <li><strong>Keyboard</strong> — Full QWERTY keyboard with symbols and special keys.</li>
+                <li><strong>Text Input</strong> — Multi-line editor with one-tap send.</li>
+                <li><strong>Auto-Connect</strong> — Automatically connects when a single device is found.</li>
+                <li><strong>Auto-Reconnect</strong> — Reconnects automatically if the projector restarts.</li>
+                <li><strong>Dark / Light Theme</strong> — Persistent preference.</li>
+            </ul>
+
+            <h2>FAQ</h2>
+
+            <div class="faq-item">
+                <strong>Q: The app cannot find my projector.</strong>
+                <p>Make sure Bluetooth is enabled on your iPhone and the projector's BLE receiver service is running. Move closer to the projector and try scanning again.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q: The connection keeps dropping.</strong>
+                <p>Ensure you are within Bluetooth range (typically 10 meters). The app will automatically attempt to reconnect. If reconnection fails after 2 minutes, you will be returned to the scan screen.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q: I denied Bluetooth permission. How do I fix it?</strong>
+                <p>Go to iPhone Settings → Lumina Go → Bluetooth, and toggle it on. Return to the app and it will detect the restored permission automatically.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q: What projectors are compatible?</strong>
+                <p>Lumina Go works with any projector running the companion BLE GATT receiver service. Contact your projector manufacturer for compatibility information.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q: Does the app collect my data?</strong>
+                <p>No. All data stays on your device. No analytics, no accounts, no server communication. See our <a href="index.html">Privacy Policy</a> for details.</p>
+            </div>
+
+            <h2>System Requirements</h2>
+            <ul>
+                <li>iPhone with iOS 16.0 or later</li>
+                <li>Bluetooth 4.0+ (BLE) support</li>
+                <li>A compatible BLE-enabled projector</li>
+            </ul>
+
+            <div class="contact-card">
+                <h3>Contact Us</h3>
+                <p>If you need further assistance, please email us at:</p>
+                <p><strong><a href="mailto:luminalink@hotack.cn">luminalink@hotack.cn</a></strong></p>
+                <p>We typically respond within 1–2 business days.</p>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Privacy Policy</a>
+            </div>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- 中文 -->
+        <div id="lang-zh" class="section">
+            <h1>Lumina Go 支持</h1>
+            <p class="subtitle">蓝牙低功耗投影仪无线遥控器</p>
+
+            <h2>关于</h2>
+            <p>Lumina Go 让你的 iPhone 变身为功能完备的投影仪无线遥控器。通过蓝牙低功耗（BLE）控制导航、音量、对焦、键盘输入和鼠标光标。</p>
+
+            <h2>快速开始</h2>
+            <ol>
+                <li>确保投影仪已开机，BLE 接收端服务正在运行。</li>
+                <li>打开 Lumina Go，授予蓝牙权限。</li>
+                <li>点击<strong>开始扫描</strong>搜索附近的投影仪。</li>
+                <li>发现投影仪后，点击连接（如果只发现一台设备，会自动连接）。</li>
+                <li>使用四个页签控制投影仪：遥控器、触摸板、键盘、文本输入。</li>
+            </ol>
+
+            <h2>功能介绍</h2>
+            <ul>
+                <li><strong>遥控器</strong> — 方向导航、确认、返回、主页、菜单、音量、对焦、信号源切换。</li>
+                <li><strong>触摸板</strong> — 移动光标、轻点点击、双指右键和滚动。速度可调（0.5x–3.0x）。</li>
+                <li><strong>键盘</strong> — 全尺寸 QWERTY 键盘，支持符号和特殊键。</li>
+                <li><strong>文本输入</strong> — 多行编辑器，一键发送。</li>
+                <li><strong>自动连接</strong> — 发现单一设备时自动连接。</li>
+                <li><strong>自动重连</strong> — 投影仪重启后自动重连。</li>
+                <li><strong>深色 / 浅色主题</strong> — 偏好自动保存。</li>
+            </ul>
+
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <strong>Q：App 找不到我的投影仪。</strong>
+                <p>请确保 iPhone 蓝牙已开启，投影仪的 BLE 接收端服务正在运行。靠近投影仪后重新扫描。</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q：连接经常断开。</strong>
+                <p>请确保在蓝牙有效范围内（通常 10 米以内）。App 会自动尝试重连，如果 2 分钟内重连失败，会返回扫描页面。</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q：我拒绝了蓝牙权限，怎么办？</strong>
+                <p>打开 iPhone 设置 → Lumina Go → 蓝牙，开启权限。返回 App 后会自动检测到权限恢复。</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q：哪些投影仪兼容？</strong>
+                <p>Lumina Go 支持所有运行配套 BLE GATT 接收端服务的投影仪。请联系投影仪厂商获取兼容性信息。</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q：App 会收集我的数据吗？</strong>
+                <p>不会。所有数据都保存在你的设备上，无追踪、无账号、不联网。详见<a href="index.html">隐私协议</a>。</p>
+            </div>
+
+            <h2>系统要求</h2>
+            <ul>
+                <li>iPhone，iOS 16.0 或更高版本</li>
+                <li>蓝牙 4.0+（BLE）支持</li>
+                <li>兼容的 BLE 投影仪</li>
+            </ul>
+
+            <div class="contact-card">
+                <h3>联系我们</h3>
+                <p>如需进一步帮助，请发送邮件至：</p>
+                <p><strong><a href="mailto:luminalink@hotack.cn">luminalink@hotack.cn</a></strong></p>
+                <p>我们通常在 1-2 个工作日内回复。</p>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">隐私协议</a>
+            </div>
+
+            <footer>&copy; 2026 Lumina Go. 保留所有权利。</footer>
+        </div>
+
+        <!-- 日本語 -->
+        <div id="lang-ja" class="section">
+            <h1>Lumina Go サポート</h1>
+            <p class="subtitle">BLEワイヤレスプロジェクターリモコン</p>
+
+            <h2>概要</h2>
+            <p>Lumina Go は、iPhone を BLE 対応プロジェクターのフル機能ワイヤレスリモコンに変えます。Bluetooth Low Energy でナビゲーション、音量、フォーカス、キーボード入力、マウスカーソルを操作できます。</p>
+
+            <h2>はじめに</h2>
+            <ol>
+                <li>プロジェクターの電源を入れ、BLE レシーバーサービスが起動していることを確認してください。</li>
+                <li>Lumina Go を開き、Bluetooth 権限を許可してください。</li>
+                <li><strong>スキャン開始</strong>をタップして近くのプロジェクターを検索します。</li>
+                <li>プロジェクターが見つかったらタップして接続（1台のみの場合は自動接続されます）。</li>
+                <li>4つのタブでプロジェクターを操作：リモコン、タッチパッド、キーボード、テキスト入力。</li>
+            </ol>
+
+            <h2>機能紹介</h2>
+            <ul>
+                <li><strong>リモコン</strong> — 方向ナビ、OK、戻る、ホーム、メニュー、音量、フォーカス、入力ソース切替。</li>
+                <li><strong>タッチパッド</strong> — カーソル移動、タップでクリック、2本指で右クリック・スクロール。速度調整可能（0.5x〜3.0x）。</li>
+                <li><strong>キーボード</strong> — フル QWERTY キーボード、記号と特殊キー対応。</li>
+                <li><strong>テキスト入力</strong> — 複数行エディタ、ワンタップ送信。</li>
+                <li><strong>自動接続</strong> — 単一デバイス発見時に自動接続。</li>
+                <li><strong>自動再接続</strong> — プロジェクター再起動後に自動再接続。</li>
+                <li><strong>ダーク / ライトテーマ</strong> — 設定を自動保存。</li>
+            </ul>
+
+            <h2>よくある質問</h2>
+
+            <div class="faq-item">
+                <strong>Q：アプリがプロジェクターを見つけられません。</strong>
+                <p>iPhone の Bluetooth が有効で、プロジェクターの BLE レシーバーサービスが実行中であることを確認してください。プロジェクターに近づいてから再スキャンしてください。</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q：接続がよく切れます。</strong>
+                <p>Bluetooth の有効範囲内（通常10メートル）にいることを確認してください。アプリは自動的に再接続を試みます。2分以内に再接続できない場合はスキャン画面に戻ります。</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q：Bluetooth 権限を拒否してしまいました。</strong>
+                <p>iPhone の設定 → Lumina Go → Bluetooth でオンにしてください。アプリに戻ると自動的に権限の回復を検出します。</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q：どのプロジェクターに対応していますか？</strong>
+                <p>Lumina Go は、コンパニオン BLE GATT レシーバーサービスを実行しているすべてのプロジェクターで動作します。互換性についてはプロジェクターメーカーにお問い合わせください。</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Q：アプリはデータを収集しますか？</strong>
+                <p>いいえ。全データはデバイス内に保存されます。トラッキングなし、アカウント不要、サーバー通信なし。詳しくは<a href="index.html">プライバシーポリシー</a>をご覧ください。</p>
+            </div>
+
+            <h2>システム要件</h2>
+            <ul>
+                <li>iPhone、iOS 16.0 以降</li>
+                <li>Bluetooth 4.0+（BLE）対応</li>
+                <li>対応する BLE プロジェクター</li>
+            </ul>
+
+            <div class="contact-card">
+                <h3>お問い合わせ</h3>
+                <p>さらにサポートが必要な場合は、メールでご連絡ください：</p>
+                <p><strong><a href="mailto:luminalink@hotack.cn">luminalink@hotack.cn</a></strong></p>
+                <p>通常1〜2営業日以内に返信いたします。</p>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">プライバシーポリシー</a>
+            </div>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.lang-switcher a').forEach(a => a.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
