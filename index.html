@@ -44,12 +44,14 @@
         a { color: #4285f4; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .lang-switcher {
-            text-align: right;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 6px;
             margin-bottom: 24px;
             font-size: 14px;
         }
         .lang-switcher a {
-            margin-left: 12px;
             padding: 4px 10px;
             border: 1px solid #dee2e6;
             border-radius: 6px;
@@ -79,6 +81,19 @@
             <a href="#" onclick="switchLang('en')" id="btn-en" class="active">English</a>
             <a href="#" onclick="switchLang('zh')" id="btn-zh">中文</a>
             <a href="#" onclick="switchLang('ja')" id="btn-ja">日本語</a>
+            <a href="#" onclick="switchLang('zh-Hant')" id="btn-zh-Hant">繁體中文</a>
+            <a href="#" onclick="switchLang('es')" id="btn-es">Español</a>
+            <a href="#" onclick="switchLang('fr')" id="btn-fr">Français</a>
+            <a href="#" onclick="switchLang('de')" id="btn-de">Deutsch</a>
+            <a href="#" onclick="switchLang('pt')" id="btn-pt">Português</a>
+            <a href="#" onclick="switchLang('ru')" id="btn-ru">Русский</a>
+            <a href="#" onclick="switchLang('ko')" id="btn-ko">한국어</a>
+            <a href="#" onclick="switchLang('ar')" id="btn-ar">العربية</a>
+            <a href="#" onclick="switchLang('hi')" id="btn-hi">हिन्दी</a>
+            <a href="#" onclick="switchLang('id')" id="btn-id">Indonesia</a>
+            <a href="#" onclick="switchLang('tr')" id="btn-tr">Türkçe</a>
+            <a href="#" onclick="switchLang('vi')" id="btn-vi">Tiếng Việt</a>
+            <a href="#" onclick="switchLang('th')" id="btn-th">ไทย</a>
         </div>
 
         <!-- English -->
@@ -212,6 +227,591 @@
 
             <h2>8. お問い合わせ</h2>
             <p>本ポリシーに関するご質問は <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a> までご連絡ください。</p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- 繁體中文 -->
+        <div id="lang-zh-Hant" class="section">
+            <h1>Lumina Go 隱私政策</h1>
+            <p class="effective-date">生效日期：2026年4月1日</p>
+
+            <h2>1. 我們收集的資訊</h2>
+            <p>本應用程式使用藍牙低功耗（BLE）掃描並連接相容的投影機裝置。在此過程中可能存取：</p>
+            <ul>
+                <li>附近 Bluetooth 裝置的名稱和位址</li>
+                <li>Bluetooth 訊號強度（RSSI）</li>
+                <li>裝置連線狀態</li>
+            </ul>
+
+            <h2>2. 使用目的</h2>
+            <p>所收集的資訊僅用於：</p>
+            <ul>
+                <li>發現並連接您的投影機</li>
+                <li>傳送遙控指令（導航、音量、文字輸入、滑鼠等）</li>
+                <li>維持穩定的 Bluetooth 連線</li>
+            </ul>
+
+            <h2>3. 資料儲存</h2>
+            <p>所有資料僅在您的裝置本機處理和儲存。我們不會將任何個人資訊或裝置資料傳輸到外部伺服器。</p>
+
+            <h2>4. 第三方分享</h2>
+            <p>我們不會與任何第三方分享資料。應用程式安裝後完全離線運作。</p>
+
+            <h2>5. 所需權限</h2>
+            <ul>
+                <li><strong>Bluetooth：</strong>用於發現投影機並與其通訊。</li>
+                <li><strong>位置（Android 11 及以下）：</strong>作業系統執行 BLE 掃描所需。我們不會將您的位置用於任何其他目的。</li>
+            </ul>
+
+            <h2>6. 您的權利</h2>
+            <p>您可以隨時透過裝置設定撤銷 Bluetooth 和位置權限。撤銷後應用程式將無法掃描和連接投影機。</p>
+
+            <h2>7. 政策變更</h2>
+            <p>我們可能會不時更新本政策，任何變更將在應用程式更新中體現。</p>
+
+            <h2>8. 聯絡我們</h2>
+            <p>如果您對本政策有任何疑問，請聯絡 <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- Español -->
+        <div id="lang-es" class="section">
+            <h1>Política de Privacidad de Lumina Go</h1>
+            <p class="effective-date">Fecha de vigencia: 1 de abril de 2026</p>
+
+            <h2>1. Información que recopilamos</h2>
+            <p>Esta aplicación utiliza Bluetooth Low Energy (BLE) para buscar y conectarse a dispositivos de proyector compatibles. Durante este proceso podemos acceder a:</p>
+            <ul>
+                <li>Nombres y direcciones de dispositivos Bluetooth cercanos</li>
+                <li>Intensidad de la señal Bluetooth (RSSI)</li>
+                <li>Estado de conexión del dispositivo</li>
+            </ul>
+
+            <h2>2. Finalidad del uso</h2>
+            <p>Toda la información recopilada se utiliza exclusivamente para:</p>
+            <ul>
+                <li>Descubrir y conectarse a su proyector</li>
+                <li>Enviar comandos de control remoto (navegación, volumen, entrada de texto, ratón, etc.)</li>
+                <li>Mantener una conexión Bluetooth estable</li>
+            </ul>
+
+            <h2>3. Almacenamiento de datos</h2>
+            <p>Todos los datos se procesan y almacenan localmente en su dispositivo únicamente. No transmitimos ninguna información personal ni datos del dispositivo a servidores externos.</p>
+
+            <h2>4. Compartir con terceros</h2>
+            <p>No compartimos datos con terceros. La aplicación funciona completamente sin conexión después de la instalación.</p>
+
+            <h2>5. Permisos requeridos</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> necesario para descubrir y comunicarse con su proyector.</li>
+                <li><strong>Ubicación (Android 11 e inferior):</strong> requerido por el sistema operativo para realizar el escaneo BLE. No utilizamos su ubicación para ningún otro fin.</li>
+            </ul>
+
+            <h2>6. Sus derechos</h2>
+            <p>Puede revocar los permisos de Bluetooth y ubicación en cualquier momento a través de la configuración de su dispositivo. Hacerlo impedirá que la aplicación busque y se conecte a proyectores.</p>
+
+            <h2>7. Cambios en esta política</h2>
+            <p>Podemos actualizar esta política de vez en cuando. Cualquier cambio se reflejará en la actualización de la aplicación.</p>
+
+            <h2>8. Contáctenos</h2>
+            <p>Si tiene alguna pregunta sobre esta política, contáctenos en <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- Français -->
+        <div id="lang-fr" class="section">
+            <h1>Politique de Confidentialité de Lumina Go</h1>
+            <p class="effective-date">Date d'entrée en vigueur : 1er avril 2026</p>
+
+            <h2>1. Informations que nous collectons</h2>
+            <p>Cette application utilise le Bluetooth Low Energy (BLE) pour rechercher et se connecter à des projecteurs compatibles. Au cours de ce processus, nous pouvons accéder à :</p>
+            <ul>
+                <li>Noms et adresses des appareils Bluetooth à proximité</li>
+                <li>Puissance du signal Bluetooth (RSSI)</li>
+                <li>État de connexion de l'appareil</li>
+            </ul>
+
+            <h2>2. Finalité de l'utilisation</h2>
+            <p>Toutes les informations collectées sont utilisées uniquement pour :</p>
+            <ul>
+                <li>Découvrir et se connecter à votre projecteur</li>
+                <li>Envoyer des commandes de télécommande (navigation, volume, saisie de texte, souris, etc.)</li>
+                <li>Maintenir une connexion Bluetooth stable</li>
+            </ul>
+
+            <h2>3. Stockage des données</h2>
+            <p>Toutes les données sont traitées et stockées localement sur votre appareil uniquement. Nous ne transmettons aucune information personnelle ni donnée d'appareil à des serveurs externes.</p>
+
+            <h2>4. Partage avec des tiers</h2>
+            <p>Nous ne partageons aucune donnée avec des tiers. L'application fonctionne entièrement hors ligne après l'installation.</p>
+
+            <h2>5. Autorisations requises</h2>
+            <ul>
+                <li><strong>Bluetooth :</strong> nécessaire pour découvrir et communiquer avec votre projecteur.</li>
+                <li><strong>Localisation (Android 11 et versions antérieures) :</strong> requis par le système d'exploitation pour effectuer le scan BLE. Nous n'utilisons pas votre localisation à d'autres fins.</li>
+            </ul>
+
+            <h2>6. Vos droits</h2>
+            <p>Vous pouvez révoquer les autorisations Bluetooth et de localisation à tout moment via les paramètres de votre appareil. Cela empêchera l'application de rechercher et de se connecter aux projecteurs.</p>
+
+            <h2>7. Modifications de cette politique</h2>
+            <p>Nous pouvons mettre à jour cette politique de temps à autre. Toute modification sera reflétée dans la mise à jour de l'application.</p>
+
+            <h2>8. Nous contacter</h2>
+            <p>Si vous avez des questions concernant cette politique, veuillez nous contacter à <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- Deutsch -->
+        <div id="lang-de" class="section">
+            <h1>Lumina Go Datenschutzrichtlinie</h1>
+            <p class="effective-date">Gültig ab: 1. April 2026</p>
+
+            <h2>1. Informationen, die wir erfassen</h2>
+            <p>Diese Anwendung verwendet Bluetooth Low Energy (BLE), um kompatible Projektorgeräte zu suchen und sich mit ihnen zu verbinden. Dabei können wir auf folgende Daten zugreifen:</p>
+            <ul>
+                <li>Namen und Adressen nahegelegener Bluetooth-Geräte</li>
+                <li>Bluetooth-Signalstärke (RSSI)</li>
+                <li>Verbindungsstatus des Geräts</li>
+            </ul>
+
+            <h2>2. Verwendungszweck</h2>
+            <p>Alle erfassten Informationen werden ausschließlich verwendet für:</p>
+            <ul>
+                <li>Erkennung und Verbindung mit Ihrem Projektor</li>
+                <li>Senden von Fernbedienungsbefehlen (Navigation, Lautstärke, Texteingabe, Maus usw.)</li>
+                <li>Aufrechterhaltung einer stabilen Bluetooth-Verbindung</li>
+            </ul>
+
+            <h2>3. Datenspeicherung</h2>
+            <p>Alle Daten werden ausschließlich lokal auf Ihrem Gerät verarbeitet und gespeichert. Wir übertragen keine persönlichen Informationen oder Gerätedaten an externe Server.</p>
+
+            <h2>4. Weitergabe an Dritte</h2>
+            <p>Wir geben keine Daten an Dritte weiter. Die App funktioniert nach der Installation vollständig offline.</p>
+
+            <h2>5. Erforderliche Berechtigungen</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> erforderlich, um Ihren Projektor zu erkennen und mit ihm zu kommunizieren.</li>
+                <li><strong>Standort (Android 11 und niedriger):</strong> vom Betriebssystem für den BLE-Scan benötigt. Wir verwenden Ihren Standort nicht für andere Zwecke.</li>
+            </ul>
+
+            <h2>6. Ihre Rechte</h2>
+            <p>Sie können die Bluetooth- und Standortberechtigungen jederzeit über Ihre Geräteeinstellungen widerrufen. Dies verhindert, dass die App nach Projektoren suchen und sich mit ihnen verbinden kann.</p>
+
+            <h2>7. Änderungen dieser Richtlinie</h2>
+            <p>Wir können diese Richtlinie von Zeit zu Zeit aktualisieren. Änderungen werden im App-Update berücksichtigt.</p>
+
+            <h2>8. Kontakt</h2>
+            <p>Wenn Sie Fragen zu dieser Richtlinie haben, kontaktieren Sie uns bitte unter <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- Português -->
+        <div id="lang-pt" class="section">
+            <h1>Política de Privacidade do Lumina Go</h1>
+            <p class="effective-date">Data de vigência: 1 de abril de 2026</p>
+
+            <h2>1. Informações que coletamos</h2>
+            <p>Este aplicativo utiliza Bluetooth Low Energy (BLE) para buscar e conectar-se a projetores compatíveis. Durante esse processo, podemos acessar:</p>
+            <ul>
+                <li>Nomes e endereços de dispositivos Bluetooth próximos</li>
+                <li>Intensidade do sinal Bluetooth (RSSI)</li>
+                <li>Status de conexão do dispositivo</li>
+            </ul>
+
+            <h2>2. Finalidade do uso</h2>
+            <p>Todas as informações coletadas são utilizadas exclusivamente para:</p>
+            <ul>
+                <li>Descobrir e conectar-se ao seu projetor</li>
+                <li>Enviar comandos de controle remoto (navegação, volume, entrada de texto, mouse, etc.)</li>
+                <li>Manter uma conexão Bluetooth estável</li>
+            </ul>
+
+            <h2>3. Armazenamento de dados</h2>
+            <p>Todos os dados são processados e armazenados localmente no seu dispositivo apenas. Não transmitimos nenhuma informação pessoal ou dados do dispositivo para servidores externos.</p>
+
+            <h2>4. Compartilhamento com terceiros</h2>
+            <p>Não compartilhamos dados com terceiros. O aplicativo funciona totalmente offline após a instalação.</p>
+
+            <h2>5. Permissões necessárias</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> necessário para descobrir e se comunicar com o seu projetor.</li>
+                <li><strong>Localização (Android 11 e inferior):</strong> exigido pelo sistema operacional para realizar a varredura BLE. Não utilizamos sua localização para nenhum outro fim.</li>
+            </ul>
+
+            <h2>6. Seus direitos</h2>
+            <p>Você pode revogar as permissões de Bluetooth e localização a qualquer momento nas configurações do dispositivo. Isso impedirá o aplicativo de buscar e conectar-se a projetores.</p>
+
+            <h2>7. Alterações nesta política</h2>
+            <p>Podemos atualizar esta política periodicamente. Quaisquer alterações serão refletidas na atualização do aplicativo.</p>
+
+            <h2>8. Fale conosco</h2>
+            <p>Se você tiver dúvidas sobre esta política, entre em contato conosco em <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- Русский -->
+        <div id="lang-ru" class="section">
+            <h1>Политика конфиденциальности Lumina Go</h1>
+            <p class="effective-date">Дата вступления в силу: 1 апреля 2026 г.</p>
+
+            <h2>1. Информация, которую мы собираем</h2>
+            <p>Это приложение использует Bluetooth Low Energy (BLE) для поиска и подключения к совместимым проекторам. В ходе этого процесса мы можем получать доступ к:</p>
+            <ul>
+                <li>Именам и адресам ближайших устройств Bluetooth</li>
+                <li>Уровню сигнала Bluetooth (RSSI)</li>
+                <li>Статусу подключения устройства</li>
+            </ul>
+
+            <h2>2. Цели использования</h2>
+            <p>Вся собранная информация используется исключительно для:</p>
+            <ul>
+                <li>Обнаружения и подключения к вашему проектору</li>
+                <li>Отправки команд дистанционного управления (навигация, громкость, ввод текста, мышь и т. д.)</li>
+                <li>Поддержания стабильного соединения Bluetooth</li>
+            </ul>
+
+            <h2>3. Хранение данных</h2>
+            <p>Все данные обрабатываются и хранятся исключительно локально на вашем устройстве. Мы не передаём персональную информацию или данные устройства на внешние серверы.</p>
+
+            <h2>4. Передача третьим лицам</h2>
+            <p>Мы не передаём данные третьим лицам. Приложение работает полностью в автономном режиме после установки.</p>
+
+            <h2>5. Необходимые разрешения</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> необходим для обнаружения проектора и связи с ним.</li>
+                <li><strong>Местоположение (Android 11 и ниже):</strong> требуется операционной системой для выполнения сканирования BLE. Мы не используем ваше местоположение в других целях.</li>
+            </ul>
+
+            <h2>6. Ваши права</h2>
+            <p>Вы можете отозвать разрешения на Bluetooth и определение местоположения в любое время через настройки устройства. Это не позволит приложению сканировать и подключаться к проекторам.</p>
+
+            <h2>7. Изменения в политике</h2>
+            <p>Мы можем время от времени обновлять эту политику. Любые изменения будут отражены в обновлении приложения.</p>
+
+            <h2>8. Свяжитесь с нами</h2>
+            <p>Если у вас есть вопросы по данной политике, свяжитесь с нами по адресу <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- 한국어 -->
+        <div id="lang-ko" class="section">
+            <h1>Lumina Go 개인정보 처리방침</h1>
+            <p class="effective-date">시행일: 2026년 4월 1일</p>
+
+            <h2>1. 수집하는 정보</h2>
+            <p>본 앱은 Bluetooth Low Energy(BLE)를 사용하여 호환되는 프로젝터 기기를 검색하고 연결합니다. 이 과정에서 다음 정보에 접근할 수 있습니다:</p>
+            <ul>
+                <li>주변 Bluetooth 기기의 이름 및 주소</li>
+                <li>Bluetooth 신호 강도(RSSI)</li>
+                <li>기기 연결 상태</li>
+            </ul>
+
+            <h2>2. 사용 목적</h2>
+            <p>수집된 모든 정보는 다음 목적으로만 사용됩니다:</p>
+            <ul>
+                <li>프로젝터 검색 및 연결</li>
+                <li>리모컨 명령 전송(탐색, 볼륨, 텍스트 입력, 마우스 등)</li>
+                <li>안정적인 Bluetooth 연결 유지</li>
+            </ul>
+
+            <h2>3. 데이터 저장</h2>
+            <p>모든 데이터는 사용자의 기기에서만 처리 및 저장됩니다. 개인 정보나 기기 데이터를 외부 서버로 전송하지 않습니다.</p>
+
+            <h2>4. 제3자 공유</h2>
+            <p>어떠한 데이터도 제3자와 공유하지 않습니다. 앱은 설치 후 완전히 오프라인으로 작동합니다.</p>
+
+            <h2>5. 필요한 권한</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> 프로젝터를 검색하고 통신하는 데 필요합니다.</li>
+                <li><strong>위치(Android 11 이하):</strong> BLE 스캔을 수행하기 위해 운영 체제에서 요구합니다. 위치 정보를 다른 목적으로 사용하지 않습니다.</li>
+            </ul>
+
+            <h2>6. 사용자의 권리</h2>
+            <p>기기 설정에서 언제든지 Bluetooth 및 위치 권한을 철회할 수 있습니다. 철회 시 앱이 프로젝터를 검색하고 연결할 수 없게 됩니다.</p>
+
+            <h2>7. 정책 변경</h2>
+            <p>본 방침은 수시로 업데이트될 수 있습니다. 변경 사항은 앱 업데이트에 반영됩니다.</p>
+
+            <h2>8. 문의하기</h2>
+            <p>본 방침에 대해 궁금한 사항이 있으시면 <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a>으로 연락해 주세요.</p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- العربية -->
+        <div id="lang-ar" class="section">
+            <h1>سياسة الخصوصية لتطبيق Lumina Go</h1>
+            <p class="effective-date">تاريخ السريان: 1 أبريل 2026</p>
+
+            <h2>1. المعلومات التي نجمعها</h2>
+            <p>يستخدم هذا التطبيق تقنية Bluetooth Low Energy (BLE) للبحث عن أجهزة العرض المتوافقة والاتصال بها. خلال هذه العملية قد نصل إلى:</p>
+            <ul>
+                <li>أسماء وعناوين أجهزة Bluetooth القريبة</li>
+                <li>قوة إشارة Bluetooth (RSSI)</li>
+                <li>حالة اتصال الجهاز</li>
+            </ul>
+
+            <h2>2. الغرض من الاستخدام</h2>
+            <p>تُستخدم جميع المعلومات المُجمّعة فقط من أجل:</p>
+            <ul>
+                <li>اكتشاف جهاز العرض الخاص بك والاتصال به</li>
+                <li>إرسال أوامر التحكم عن بُعد (التنقل، مستوى الصوت، إدخال النص، الماوس، إلخ)</li>
+                <li>الحفاظ على اتصال Bluetooth مستقر</li>
+            </ul>
+
+            <h2>3. تخزين البيانات</h2>
+            <p>تتم معالجة جميع البيانات وتخزينها محليًا على جهازك فقط. لا نقوم بنقل أي معلومات شخصية أو بيانات الجهاز إلى خوادم خارجية.</p>
+
+            <h2>4. المشاركة مع أطراف ثالثة</h2>
+            <p>لا نشارك أي بيانات مع أطراف ثالثة. يعمل التطبيق بالكامل دون اتصال بالإنترنت بعد التثبيت.</p>
+
+            <h2>5. الأذونات المطلوبة</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> مطلوب لاكتشاف جهاز العرض والتواصل معه.</li>
+                <li><strong>الموقع (Android 11 والإصدارات الأقدم):</strong> مطلوب من نظام التشغيل لإجراء مسح BLE. لا نستخدم موقعك لأي غرض آخر.</li>
+            </ul>
+
+            <h2>6. حقوقك</h2>
+            <p>يمكنك إلغاء أذونات Bluetooth والموقع في أي وقت من خلال إعدادات جهازك. سيؤدي ذلك إلى منع التطبيق من البحث عن أجهزة العرض والاتصال بها.</p>
+
+            <h2>7. التغييرات على هذه السياسة</h2>
+            <p>قد نقوم بتحديث هذه السياسة من وقت لآخر. ستنعكس أي تغييرات في تحديث التطبيق.</p>
+
+            <h2>8. اتصل بنا</h2>
+            <p>إذا كان لديك أي أسئلة حول هذه السياسة، يرجى التواصل معنا على <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- हिन्दी -->
+        <div id="lang-hi" class="section">
+            <h1>Lumina Go गोपनीयता नीति</h1>
+            <p class="effective-date">प्रभावी तिथि: 1 अप्रैल 2026</p>
+
+            <h2>1. हम कौन सी जानकारी एकत्र करते हैं</h2>
+            <p>यह ऐप संगत प्रोजेक्टर उपकरणों को खोजने और उनसे कनेक्ट करने के लिए Bluetooth Low Energy (BLE) का उपयोग करता है। इस प्रक्रिया में हम निम्नलिखित तक पहुँच सकते हैं:</p>
+            <ul>
+                <li>आस-पास के Bluetooth उपकरणों के नाम और पते</li>
+                <li>Bluetooth सिग्नल की शक्ति (RSSI)</li>
+                <li>उपकरण कनेक्शन स्थिति</li>
+            </ul>
+
+            <h2>2. उपयोग का उद्देश्य</h2>
+            <p>एकत्र की गई सभी जानकारी का उपयोग केवल इन उद्देश्यों के लिए किया जाता है:</p>
+            <ul>
+                <li>आपके प्रोजेक्टर की खोज और उससे कनेक्ट करना</li>
+                <li>रिमोट-कंट्रोल कमांड भेजना (नेविगेशन, वॉल्यूम, टेक्स्ट इनपुट, माउस आदि)</li>
+                <li>स्थिर Bluetooth कनेक्शन बनाए रखना</li>
+            </ul>
+
+            <h2>3. डेटा संग्रहण</h2>
+            <p>सभी डेटा केवल आपके उपकरण पर स्थानीय रूप से संसाधित और संग्रहीत किया जाता है। हम कोई भी व्यक्तिगत जानकारी या उपकरण डेटा बाहरी सर्वर पर नहीं भेजते।</p>
+
+            <h2>4. तृतीय-पक्ष साझाकरण</h2>
+            <p>हम किसी भी तृतीय पक्ष के साथ डेटा साझा नहीं करते। इंस्टॉलेशन के बाद ऐप पूरी तरह ऑफ़लाइन काम करता है।</p>
+
+            <h2>5. आवश्यक अनुमतियाँ</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> आपके प्रोजेक्टर की खोज और उससे संवाद करने के लिए आवश्यक है।</li>
+                <li><strong>स्थान (Android 11 और उससे नीचे):</strong> BLE स्कैनिंग करने के लिए ऑपरेटिंग सिस्टम द्वारा आवश्यक। हम आपके स्थान का किसी अन्य उद्देश्य के लिए उपयोग नहीं करते।</li>
+            </ul>
+
+            <h2>6. आपके अधिकार</h2>
+            <p>आप अपने उपकरण की सेटिंग्स के माध्यम से किसी भी समय Bluetooth और स्थान अनुमतियाँ रद्द कर सकते हैं। ऐसा करने से ऐप प्रोजेक्टर खोजने और उनसे कनेक्ट करने में असमर्थ हो जाएगा।</p>
+
+            <h2>7. इस नीति में परिवर्तन</h2>
+            <p>हम समय-समय पर इस नीति को अपडेट कर सकते हैं। कोई भी परिवर्तन ऐप अपडेट में दिखाई देगा।</p>
+
+            <h2>8. हमसे संपर्क करें</h2>
+            <p>यदि इस नीति के बारे में आपके कोई प्रश्न हैं, तो कृपया हमसे <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a> पर संपर्क करें।</p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- Indonesia -->
+        <div id="lang-id" class="section">
+            <h1>Kebijakan Privasi Lumina Go</h1>
+            <p class="effective-date">Tanggal berlaku: 1 April 2026</p>
+
+            <h2>1. Informasi yang Kami Kumpulkan</h2>
+            <p>Aplikasi ini menggunakan Bluetooth Low Energy (BLE) untuk memindai dan terhubung ke perangkat proyektor yang kompatibel. Selama proses ini, kami dapat mengakses:</p>
+            <ul>
+                <li>Nama dan alamat perangkat Bluetooth di sekitar</li>
+                <li>Kekuatan sinyal Bluetooth (RSSI)</li>
+                <li>Status koneksi perangkat</li>
+            </ul>
+
+            <h2>2. Tujuan Penggunaan</h2>
+            <p>Semua informasi yang dikumpulkan digunakan hanya untuk:</p>
+            <ul>
+                <li>Menemukan dan terhubung ke proyektor Anda</li>
+                <li>Mengirim perintah remote control (navigasi, volume, input teks, mouse, dll.)</li>
+                <li>Menjaga koneksi Bluetooth yang stabil</li>
+            </ul>
+
+            <h2>3. Penyimpanan Data</h2>
+            <p>Semua data diproses dan disimpan secara lokal di perangkat Anda saja. Kami tidak mengirimkan informasi pribadi atau data perangkat apa pun ke server eksternal.</p>
+
+            <h2>4. Berbagi dengan Pihak Ketiga</h2>
+            <p>Kami tidak membagikan data apa pun kepada pihak ketiga. Aplikasi beroperasi sepenuhnya secara offline setelah instalasi.</p>
+
+            <h2>5. Izin yang Diperlukan</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> diperlukan untuk menemukan dan berkomunikasi dengan proyektor Anda.</li>
+                <li><strong>Lokasi (Android 11 ke bawah):</strong> diperlukan oleh sistem operasi untuk melakukan pemindaian BLE. Kami tidak menggunakan lokasi Anda untuk tujuan lain.</li>
+            </ul>
+
+            <h2>6. Hak Anda</h2>
+            <p>Anda dapat mencabut izin Bluetooth dan lokasi kapan saja melalui pengaturan perangkat. Hal ini akan mencegah aplikasi memindai dan terhubung ke proyektor.</p>
+
+            <h2>7. Perubahan Kebijakan Ini</h2>
+            <p>Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Perubahan apa pun akan tercermin dalam pembaruan aplikasi.</p>
+
+            <h2>8. Hubungi Kami</h2>
+            <p>Jika Anda memiliki pertanyaan tentang kebijakan ini, silakan hubungi kami di <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- Türkçe -->
+        <div id="lang-tr" class="section">
+            <h1>Lumina Go Gizlilik Politikası</h1>
+            <p class="effective-date">Yürürlük tarihi: 1 Nisan 2026</p>
+
+            <h2>1. Topladığımız Bilgiler</h2>
+            <p>Bu uygulama, uyumlu projektör cihazlarını taramak ve bunlara bağlanmak için Bluetooth Low Energy (BLE) kullanır. Bu süreçte aşağıdaki bilgilere erişebiliriz:</p>
+            <ul>
+                <li>Yakındaki Bluetooth cihaz adları ve adresleri</li>
+                <li>Bluetooth sinyal gücü (RSSI)</li>
+                <li>Cihaz bağlantı durumu</li>
+            </ul>
+
+            <h2>2. Kullanım Amacı</h2>
+            <p>Toplanan tüm bilgiler yalnızca şu amaçlarla kullanılır:</p>
+            <ul>
+                <li>Projektörünüzü keşfetmek ve bağlanmak</li>
+                <li>Uzaktan kumanda komutları göndermek (gezinme, ses, metin girişi, fare vb.)</li>
+                <li>Kararlı bir Bluetooth bağlantısı sürdürmek</li>
+            </ul>
+
+            <h2>3. Veri Depolama</h2>
+            <p>Tüm veriler yalnızca cihazınızda yerel olarak işlenir ve saklanır. Kişisel bilgilerinizi veya cihaz verilerinizi harici sunuculara aktarmayız.</p>
+
+            <h2>4. Üçüncü Taraflarla Paylaşım</h2>
+            <p>Hiçbir veriyi üçüncü taraflarla paylaşmayız. Uygulama, kurulumdan sonra tamamen çevrimdışı çalışır.</p>
+
+            <h2>5. Gerekli İzinler</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> projektörünüzü keşfetmek ve iletişim kurmak için gereklidir.</li>
+                <li><strong>Konum (Android 11 ve altı):</strong> BLE taraması gerçekleştirmek için işletim sistemi tarafından gereklidir. Konumunuzu başka bir amaçla kullanmayız.</li>
+            </ul>
+
+            <h2>6. Haklarınız</h2>
+            <p>Bluetooth ve konum izinlerini istediğiniz zaman cihaz ayarlarınızdan iptal edebilirsiniz. Bu, uygulamanın projektörleri taramasını ve bağlanmasını engelleyecektir.</p>
+
+            <h2>7. Bu Politikadaki Değişiklikler</h2>
+            <p>Bu politikayı zaman zaman güncelleyebiliriz. Değişiklikler uygulama güncellemesine yansıtılacaktır.</p>
+
+            <h2>8. Bize Ulaşın</h2>
+            <p>Bu politika hakkında sorularınız varsa lütfen <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a> adresinden bize ulaşın.</p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- Tiếng Việt -->
+        <div id="lang-vi" class="section">
+            <h1>Chính Sách Quyền Riêng Tư của Lumina Go</h1>
+            <p class="effective-date">Ngày hiệu lực: 1 tháng 4, 2026</p>
+
+            <h2>1. Thông tin chúng tôi thu thập</h2>
+            <p>Ứng dụng này sử dụng Bluetooth Low Energy (BLE) để quét và kết nối với các thiết bị máy chiếu tương thích. Trong quá trình này, chúng tôi có thể truy cập:</p>
+            <ul>
+                <li>Tên và địa chỉ của các thiết bị Bluetooth lân cận</li>
+                <li>Cường độ tín hiệu Bluetooth (RSSI)</li>
+                <li>Trạng thái kết nối thiết bị</li>
+            </ul>
+
+            <h2>2. Mục đích sử dụng</h2>
+            <p>Tất cả thông tin thu thập được chỉ được sử dụng cho:</p>
+            <ul>
+                <li>Phát hiện và kết nối với máy chiếu của bạn</li>
+                <li>Gửi lệnh điều khiển từ xa (điều hướng, âm lượng, nhập văn bản, chuột, v.v.)</li>
+                <li>Duy trì kết nối Bluetooth ổn định</li>
+            </ul>
+
+            <h2>3. Lưu trữ dữ liệu</h2>
+            <p>Tất cả dữ liệu được xử lý và lưu trữ cục bộ trên thiết bị của bạn. Chúng tôi không truyền bất kỳ thông tin cá nhân hoặc dữ liệu thiết bị nào đến máy chủ bên ngoài.</p>
+
+            <h2>4. Chia sẻ với bên thứ ba</h2>
+            <p>Chúng tôi không chia sẻ bất kỳ dữ liệu nào với bên thứ ba. Ứng dụng hoạt động hoàn toàn ngoại tuyến sau khi cài đặt.</p>
+
+            <h2>5. Quyền cần thiết</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> cần thiết để phát hiện và giao tiếp với máy chiếu của bạn.</li>
+                <li><strong>Vị trí (Android 11 trở xuống):</strong> được hệ điều hành yêu cầu để thực hiện quét BLE. Chúng tôi không sử dụng vị trí của bạn cho bất kỳ mục đích nào khác.</li>
+            </ul>
+
+            <h2>6. Quyền của bạn</h2>
+            <p>Bạn có thể thu hồi quyền Bluetooth và vị trí bất kỳ lúc nào thông qua cài đặt thiết bị. Điều này sẽ ngăn ứng dụng quét và kết nối với máy chiếu.</p>
+
+            <h2>7. Thay đổi chính sách này</h2>
+            <p>Chúng tôi có thể cập nhật chính sách này theo thời gian. Mọi thay đổi sẽ được phản ánh trong bản cập nhật ứng dụng.</p>
+
+            <h2>8. Liên hệ với chúng tôi</h2>
+            <p>Nếu bạn có bất kỳ câu hỏi nào về chính sách này, vui lòng liên hệ chúng tôi tại <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- ไทย -->
+        <div id="lang-th" class="section">
+            <h1>นโยบายความเป็นส่วนตัวของ Lumina Go</h1>
+            <p class="effective-date">วันที่มีผลบังคับใช้: 1 เมษายน 2026</p>
+
+            <h2>1. ข้อมูลที่เราเก็บรวบรวม</h2>
+            <p>แอปพลิเคชันนี้ใช้ Bluetooth Low Energy (BLE) ในการสแกนและเชื่อมต่อกับอุปกรณ์โปรเจกเตอร์ที่เข้ากันได้ ในระหว่างกระบวนการนี้ เราอาจเข้าถึง:</p>
+            <ul>
+                <li>ชื่อและที่อยู่ของอุปกรณ์ Bluetooth ใกล้เคียง</li>
+                <li>ความแรงของสัญญาณ Bluetooth (RSSI)</li>
+                <li>สถานะการเชื่อมต่ออุปกรณ์</li>
+            </ul>
+
+            <h2>2. วัตถุประสงค์ในการใช้</h2>
+            <p>ข้อมูลทั้งหมดที่เก็บรวบรวมจะถูกใช้เพื่อ:</p>
+            <ul>
+                <li>ค้นหาและเชื่อมต่อกับโปรเจกเตอร์ของคุณ</li>
+                <li>ส่งคำสั่งรีโมทคอนโทรล (การนำทาง, ระดับเสียง, การป้อนข้อความ, เมาส์ ฯลฯ)</li>
+                <li>รักษาการเชื่อมต่อ Bluetooth ที่เสถียร</li>
+            </ul>
+
+            <h2>3. การจัดเก็บข้อมูล</h2>
+            <p>ข้อมูลทั้งหมดจะถูกประมวลผลและจัดเก็บไว้ในอุปกรณ์ของคุณเท่านั้น เราไม่ส่งข้อมูลส่วนบุคคลหรือข้อมูลอุปกรณ์ใด ๆ ไปยังเซิร์ฟเวอร์ภายนอก</p>
+
+            <h2>4. การแบ่งปันกับบุคคลที่สาม</h2>
+            <p>เราไม่แบ่งปันข้อมูลใด ๆ กับบุคคลที่สาม แอปทำงานแบบออฟไลน์ทั้งหมดหลังจากติดตั้ง</p>
+
+            <h2>5. สิทธิ์ที่จำเป็น</h2>
+            <ul>
+                <li><strong>Bluetooth:</strong> จำเป็นในการค้นหาและสื่อสารกับโปรเจกเตอร์ของคุณ</li>
+                <li><strong>ตำแหน่งที่ตั้ง (Android 11 และต่ำกว่า):</strong> ระบบปฏิบัติการต้องการสำหรับการสแกน BLE เราไม่ใช้ตำแหน่งที่ตั้งของคุณเพื่อวัตถุประสงค์อื่นใด</li>
+            </ul>
+
+            <h2>6. สิทธิ์ของคุณ</h2>
+            <p>คุณสามารถเพิกถอนสิทธิ์ Bluetooth และตำแหน่งที่ตั้งได้ตลอดเวลาผ่านการตั้งค่าอุปกรณ์ การทำเช่นนี้จะป้องกันไม่ให้แอปสแกนและเชื่อมต่อกับโปรเจกเตอร์</p>
+
+            <h2>7. การเปลี่ยนแปลงนโยบายนี้</h2>
+            <p>เราอาจอัปเดตนโยบายนี้เป็นครั้งคราว การเปลี่ยนแปลงใด ๆ จะสะท้อนในการอัปเดตแอป</p>
+
+            <h2>8. ติดต่อเรา</h2>
+            <p>หากคุณมีคำถามเกี่ยวกับนโยบายนี้ กรุณาติดต่อเราที่ <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
 
             <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
         </div>
