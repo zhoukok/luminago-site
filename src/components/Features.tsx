@@ -9,6 +9,9 @@ import {
   Mic,
   Type,
   Sparkles,
+  SunMoon,
+  Sun,
+  Moon,
   Check,
   Mail,
   ArrowRight,
@@ -19,7 +22,8 @@ import { useLanguage } from "@/components/LanguageProvider";
 type Visual =
   | { type: "phone"; src: string }
   | { type: "dual"; srcA: string; srcB: string }
-  | { type: "chat" };
+  | { type: "chat" }
+  | { type: "theme" };
 
 // Scenario → icon
 const ICONS: ReactNode[] = [
@@ -29,6 +33,7 @@ const ICONS: ReactNode[] = [
   <Type key="tp" size={20} className="text-brand-200" />,
   <Mic key="mic" size={20} className="text-brand-200" />,
   <Sparkles key="sp" size={20} className="text-brand-200" />,
+  <SunMoon key="sm" size={20} className="text-brand-200" />,
 ];
 
 // Scenario → visual
@@ -43,6 +48,7 @@ const VISUALS: Visual[] = [
   { type: "phone", src: "/screenshots/s6.png" }, // 04 Text
   { type: "phone", src: "/screenshots/s5.png" }, // 05 Voice
   { type: "chat" }, // 06 AI help
+  { type: "theme" }, // 07 Day / Night themes
 ];
 
 export function Features() {
@@ -242,7 +248,10 @@ function VisualRenderer({ visual, alt }: { visual: Visual; alt: string }) {
   if (visual.type === "dual") {
     return <DualPhones srcA={visual.srcA} srcB={visual.srcB} alt={alt} />;
   }
-  return <ChatCard />;
+  if (visual.type === "chat") {
+    return <ChatCard />;
+  }
+  return <ThemeCard />;
 }
 
 function PhoneFrame({
@@ -372,6 +381,127 @@ function ChatBubble({
         }
       >
         {text}
+      </div>
+    </div>
+  );
+}
+
+function ThemeCard() {
+  return (
+    <div className="relative">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -inset-8 -z-10 rounded-[48px] bg-brand-500/10 blur-3xl"
+      />
+      <div className="relative mx-auto aspect-[9/19.5] w-[240px] sm:w-[260px] lg:w-[300px] overflow-hidden rounded-[42px] border border-white/15 bg-black p-[6px] shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)] ring-1 ring-white/5">
+        <div className="relative h-full w-full overflow-hidden rounded-[36px]">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#070b14] via-[#0a1020] to-black">
+            <MockPhoneUI variant="dark" />
+          </div>
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-white via-[#eff2f8] to-[#dfe5f1]"
+            style={{
+              clipPath: "polygon(0 0, 100% 0, 100% 48%, 0 52%)",
+            }}
+          >
+            <MockPhoneUI variant="light" />
+          </div>
+
+          <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+            <div className="flex items-center gap-0.5 rounded-full bg-black/85 p-1 ring-1 ring-white/20 shadow-[0_8px_20px_rgba(0,0,0,0.5)] backdrop-blur">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-ink ring-1 ring-black/10">
+                <Sun size={11} />
+              </span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-full text-white/70">
+                <Moon size={11} />
+              </span>
+            </div>
+          </div>
+
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-[14px] h-[18px] w-[80px] -translate-x-1/2 rounded-full bg-black/90 ring-1 ring-white/10"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MockPhoneUI({ variant }: { variant: "light" | "dark" }) {
+  const isDark = variant === "dark";
+  const bar = isDark ? "bg-white/10" : "bg-black/[0.08]";
+  const barStrong = isDark ? "bg-white/20" : "bg-black/15";
+  const card = isDark
+    ? "bg-white/[0.05] ring-1 ring-white/10"
+    : "bg-white ring-1 ring-black/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.04)]";
+  const dpadRing = isDark ? "ring-brand-400/40" : "ring-brand-500/30";
+  const dpadBg = isDark ? "bg-brand-500/25" : "bg-brand-500/10";
+  const dpadCenter = isDark ? "bg-brand-400/70" : "bg-brand-500/80";
+  const label = isDark ? "text-white/75" : "text-black/70";
+
+  return (
+    <div className="absolute inset-0 flex flex-col px-5 pt-11 pb-4">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-1.5">
+          <span
+            className={
+              "inline-flex h-4 items-center rounded-full px-1.5 text-[8px] font-mono uppercase tracking-wider " +
+              (isDark ? "bg-white/10 text-white/75" : "bg-black/[0.06] text-black/70")
+            }
+          >
+            {isDark ? "Night" : "Day"}
+          </span>
+        </div>
+        <div className={"h-1.5 w-5 rounded-full " + barStrong} />
+      </div>
+
+      <div className={"mt-4 h-2 w-16 rounded-full " + bar} />
+      <div className={"mt-1.5 h-2 w-10 rounded-full " + bar} />
+
+      <div className="mt-4 grid grid-cols-3 gap-1.5">
+        <div className={"h-7 rounded-lg " + card} />
+        <div className={"h-7 rounded-lg " + card} />
+        <div className={"h-7 rounded-lg " + card} />
+      </div>
+
+      <div className="relative mt-6 flex items-center justify-center">
+        <div
+          className={
+            "relative flex h-[110px] w-[110px] items-center justify-center rounded-full ring-2 " +
+            dpadBg +
+            " " +
+            dpadRing
+          }
+        >
+          <div className={"h-[34px] w-[34px] rounded-full " + dpadCenter} />
+          <div
+            className={
+              "absolute top-1.5 left-1/2 -translate-x-1/2 h-1.5 w-6 rounded-full " + barStrong
+            }
+          />
+          <div
+            className={
+              "absolute bottom-1.5 left-1/2 -translate-x-1/2 h-1.5 w-6 rounded-full " + barStrong
+            }
+          />
+          <div
+            className={
+              "absolute left-1.5 top-1/2 -translate-y-1/2 h-6 w-1.5 rounded-full " + barStrong
+            }
+          />
+          <div
+            className={
+              "absolute right-1.5 top-1/2 -translate-y-1/2 h-6 w-1.5 rounded-full " + barStrong
+            }
+          />
+        </div>
+      </div>
+
+      <div className="mt-auto flex items-center justify-between">
+        <div className={"h-1.5 w-8 rounded-full " + bar} />
+        <div className={"text-[8px] font-mono " + label}>{isDark ? "00:42" : "20:15"}</div>
+        <div className={"h-1.5 w-8 rounded-full " + bar} />
       </div>
     </div>
   );

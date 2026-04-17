@@ -82,9 +82,19 @@ export const es: Dict = {
           "Chat en Inglés, 中文, 日本語, Español",
         ],
       },
+      {
+        eyebrow: "Escena 07 — Noche de cine, móvil cegador",
+        title: "«Es la 1 a.m. ¿Por qué mi móvil es una linterna?»",
+        desc: "Bajas la luz, empieza la peli, coges el móvil para ajustar el volumen — y una UI pura blanca te deslumbra. La mayoría de apps de mando no se lo planteó nunca. Lumina Go trae dos temas afinados a mano: una paleta diurna nítida y un tema nocturno tipo sala de cine, que sigue automáticamente la apariencia del sistema.",
+        bullets: [
+          "Día / noche automático — sigue la apariencia del sistema iOS y Android, o cambia a mano",
+          "Cada pantalla diseñada dos veces — Mando, Teclado, Touchpad, Ratón aéreo, Voz, Texto",
+          "Negros reales OLED de noche, alto contraste legible de día",
+        ],
+      },
     ],
     closing: {
-      eyebrow: "Escena 07 — Lo que venga después",
+      eyebrow: "¿Y después?",
       title: "Esto es solo el principio.",
       desc: "Cada escena de arriba vino de alguien que se quedó atascado de verdad. Si sigue habiendo algo que no te funciona, o un momento que no hemos cubierto — cuéntanoslo. Lo verás en la próxima versión.",
       cta_label: "Cuéntanos tu escena",

@@ -82,9 +82,19 @@ export const en: Dict = {
           "Chats in English, 中文, 日本語, Español",
         ],
       },
+      {
+        eyebrow: "Scenario 07 — Movie night, blinding phone",
+        title: "“It's 1 AM. Why is my phone a flashlight?”",
+        desc: "You dim the lights, queue the movie, grab the phone to tweak the volume — and a pure-white UI blasts your eyes back open. Most remote apps never thought about this. Lumina Go ships with two hand-tuned themes: a crisp daytime palette, and a cinema-friendly night theme that auto-follows your phone's system appearance.",
+        bullets: [
+          "Auto day / night — follows iOS & Android system appearance, or override by hand",
+          "Every screen designed twice — Remote, Keyboard, Touchpad, Air mouse, Voice, Text",
+          "OLED-friendly true blacks at night, high-contrast readability by day",
+        ],
+      },
     ],
     closing: {
-      eyebrow: "Scenario 07 — Whatever comes next",
+      eyebrow: "What's next",
       title: "We're just getting started.",
       desc: "Every scenario above came from a real user who got stuck. If there's still a moment we haven't covered — or something that isn't working for you — tell us. You'll see it in the next release.",
       cta_label: "Share your scenario",
