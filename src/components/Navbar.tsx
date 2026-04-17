@@ -29,18 +29,18 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative h-8 w-8 overflow-hidden rounded-lg ring-1 ring-white/15 group-hover:ring-brand-400/80 transition">
+        <div className="flex h-[72px] items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative h-11 w-11 overflow-hidden rounded-[12px] ring-1 ring-white/15 group-hover:ring-brand-400/80 transition shadow-[0_6px_20px_-6px_rgba(0,15,240,0.45)]">
               <Image
                 src="/logo.png"
                 alt="Lumina Go"
                 fill
-                sizes="32px"
+                sizes="44px"
                 className="object-cover"
               />
             </div>
-            <span className="text-[17px] font-semibold tracking-tight">
+            <span className="text-[19px] font-semibold tracking-tight">
               Lumina Go
             </span>
           </Link>

@@ -5,11 +5,11 @@ export const es: Dict = {
     download: "Descargar",
   },
   hero: {
-    badge: "Nuevo — 50+ comandos de voz, todo en el dispositivo",
-    title_line1: "Guarda el mando de plástico.",
-    title_line2: "El nuevo control cabe en tu bolsillo.",
+    badge: "Más que un mando · tu copiloto IA para proyectores",
+    title_line1: "La última pieza",
+    title_line2: "de tu proyector.",
     tagline:
-      "Lumina Go es la app de control por Bluetooth LE para los proyectores WEMI y LYNCAST. Mando, teclado, touchpad, ratón aéreo, voz y texto — seis modos en una sola app, todo por enlace BLE directo. Sin Wi-Fi, sin cuentas, sin anuncios.",
+      "Que el tedio del tecleo fluya entre tus dedos. Mando, teclado, touchpad, ratón aéreo, voz y texto — seis modos, un enlace BLE directo, una app.",
     cta_primary: "Descargar la app",
     cta_secondary: "Ver lo que hace",
     chip_latency: "≤ 20 ms de latencia",
@@ -107,7 +107,7 @@ export const es: Dict = {
     section_lead:
       "Escanea un código con la cámara de tu móvil para instalar. Lumina Go es gratis, sin anuncios y totalmente offline.",
     ios_title: "Descarga para iPhone",
-    ios_subtitle: "iOS 15.0 o posterior",
+    ios_subtitle: "iOS 16.0 o posterior",
     ios_scan_hint: "Escanea con la cámara",
     android_title: "Obtén en Google Play",
     android_subtitle: "Android 10 o posterior",

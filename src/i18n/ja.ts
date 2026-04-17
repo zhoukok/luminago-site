@@ -5,11 +5,11 @@ export const ja: Dict = {
     download: "ダウンロード",
   },
   hero: {
-    badge: "新搭載 · 50+ 音声コマンド、すべて端末内で処理",
-    title_line1: "プラスチックのリモコン、もう要りません。",
-    title_line2: "ポケットの中の、新しいリモコン。",
+    badge: "ただのリモコンじゃない · あなたの AI プロジェクター執事",
+    title_line1: "プロジェクターの、",
+    title_line2: "最後のピース。",
     tagline:
-      "Lumina Go は WEMI と LYNCAST プロジェクター向けの Bluetooth LE リモコンアプリ。リモコン、キーボード、タッチパッド、エアマウス、音声、テキスト——1 つのアプリで 6 つの操作モード、すべて直接 BLE で完結。Wi-Fi 不要、アカウント不要、広告なし。",
+      "面倒な入力を、指先の流れに。リモコン、キーボード、タッチパッド、エアマウス、音声、テキスト——6 つの操作モード、BLE 直結 1 本、1 つのアプリ。",
     cta_primary: "今すぐダウンロード",
     cta_secondary: "機能を見る",
     chip_latency: "遅延 ≤ 20 ms",
@@ -107,7 +107,7 @@ export const ja: Dict = {
     section_lead:
       "スマホのカメラでコードを読み取るだけ。Lumina Go は完全無料、広告なし、完全オフラインで動作します。",
     ios_title: "iPhone 版",
-    ios_subtitle: "iOS 15.0 以降",
+    ios_subtitle: "iOS 16.0 以降",
     ios_scan_hint: "カメラアプリで読み取り",
     android_title: "Google Play 版",
     android_subtitle: "Android 10 以降",

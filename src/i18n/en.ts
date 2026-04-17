@@ -5,11 +5,11 @@ export const en: Dict = {
     download: "Download",
   },
   hero: {
-    badge: "New — 50+ voice commands, all on-device",
-    title_line1: "Put away the plastic remote.",
-    title_line2: "This one fits in your pocket.",
+    badge: "More than a remote · your AI projector concierge",
+    title_line1: "The last missing piece",
+    title_line2: "of your projector.",
     tagline:
-      "Lumina Go is the Bluetooth LE remote app for WEMI and LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice, and text — six modes in one app, all over a direct BLE link. No Wi-Fi, no account, no ads.",
+      "Where tedious typing flows at your fingertip. Remote, keyboard, touchpad, air mouse, voice and text — six control modes, one direct BLE link, one app.",
     cta_primary: "Download the app",
     cta_secondary: "See what it does",
     chip_latency: "≤ 20 ms latency",
@@ -107,7 +107,7 @@ export const en: Dict = {
     section_lead:
       "Scan a code with your phone camera to install. Lumina Go is free, has no ads, and works fully offline.",
     ios_title: "Download for iPhone",
-    ios_subtitle: "iOS 15.0 or later",
+    ios_subtitle: "iOS 16.0 or later",
     ios_scan_hint: "Scan with Camera app",
     android_title: "Get on Google Play",
     android_subtitle: "Android 10 or later",

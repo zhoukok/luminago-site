@@ -5,11 +5,11 @@ export const zh: Dict = {
     download: "下载",
   },
   hero: {
-    badge: "全新 · 50+ 条语音指令，全部在手机端解析",
-    title_line1: "告别塑料遥控器。",
-    title_line2: "新一代遥控装进口袋。",
+    badge: "不只是遥控 · 更是你的 AI 投影管家",
+    title_line1: "投影仪的",
+    title_line2: "最后一块拼图。",
     tagline:
-      "Lumina Go 是 WEMI 与 LYNCAST 投影仪的蓝牙低功耗遥控 App。遥控、键盘、触摸板、空中飞鼠、语音、文本——一个 App 里 6 种操控方式，全部通过直连 BLE 完成。无需 Wi-Fi、无需账号、无广告。",
+      "让繁琐的输入，化为指尖的流转。遥控、键盘、触摸板、空中飞鼠、语音、文本——6 种操控方式，一条直连 BLE 通道，一个 App。",
     cta_primary: "立即下载",
     cta_secondary: "看看它能做什么",
     chip_latency: "≤ 20 ms 延迟",
@@ -107,7 +107,7 @@ export const zh: Dict = {
     section_lead:
       "用手机相机扫码即可安装。Lumina Go 完全免费，无广告，完全离线可用。",
     ios_title: "iPhone 下载",
-    ios_subtitle: "需 iOS 15.0 或更新",
+    ios_subtitle: "需 iOS 16.0 或更新",
     ios_scan_hint: "用相机 App 扫码",
     android_title: "Google Play 下载",
     android_subtitle: "需 Android 10 或更新",

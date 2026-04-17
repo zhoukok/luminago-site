@@ -96,7 +96,7 @@ function PhoneTrio() {
   ];
 
   return (
-    <div className="relative mx-auto mt-16 flex h-[480px] sm:h-[600px] lg:h-[640px] items-end justify-center">
+    <div className="relative mx-auto mt-20 sm:mt-24 flex h-[560px] sm:h-[660px] lg:h-[720px] items-end justify-center">
       {phones.map((p, i) => {
         const isCenter = p.side === "center";
         const delay = isCenter ? 0.15 : 0.25 + i * 0.05;

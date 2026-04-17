@@ -28,7 +28,7 @@ const SITE_URL = "https://luminago.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Lumina Go — Put away the plastic remote.",
+    default: "Lumina Go — The last missing piece of your projector.",
     template: "%s · Lumina Go",
   },
   description:
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "BLE projector remote",
   ],
   openGraph: {
-    title: "Lumina Go — Put away the plastic remote.",
+    title: "Lumina Go — The last missing piece of your projector.",
     description:
       "Bluetooth LE remote app for WEMI / LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice and text — six modes, all over direct BLE. Free, offline, no ads.",
     url: SITE_URL,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lumina Go — Put away the plastic remote.",
+    title: "Lumina Go — The last missing piece of your projector.",
     description:
       "Bluetooth LE remote app for WEMI / LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice and text — all free, all offline.",
     images: ["/screenshots/s1.png"],
