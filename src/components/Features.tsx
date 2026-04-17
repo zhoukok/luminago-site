@@ -394,36 +394,36 @@ function ThemeCard() {
         className="pointer-events-none absolute -inset-10 -z-10 rounded-[48px] bg-brand-500/10 blur-3xl"
       />
       <div className="relative -mr-6 sm:-mr-10 translate-y-2 -rotate-[6deg]">
-        <ThemePhone variant="light" />
+        <ThemePhone
+          variant="light"
+          src="/screenshots/s1-light.png"
+          alt="Remote page, Day theme"
+        />
       </div>
       <div className="relative z-10 -translate-y-2 rotate-[6deg]">
-        <ThemePhone variant="dark" />
+        <ThemePhone
+          variant="dark"
+          src="/screenshots/s1.png"
+          alt="Remote page, Night theme"
+        />
       </div>
     </div>
   );
 }
 
-function ThemePhone({ variant }: { variant: "light" | "dark" }) {
+function ThemePhone({
+  variant,
+  src,
+  alt,
+}: {
+  variant: "light" | "dark";
+  src: string;
+  alt: string;
+}) {
   const isDark = variant === "dark";
   return (
     <div className="relative">
-      <div className="relative mx-auto aspect-[9/19.5] w-[180px] sm:w-[200px] lg:w-[220px] overflow-hidden rounded-[36px] border border-white/15 bg-black p-[5px] shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)] ring-1 ring-white/5">
-        <div className="relative h-full w-full overflow-hidden rounded-[32px]">
-          <div
-            className={
-              "absolute inset-0 " +
-              (isDark
-                ? "bg-gradient-to-b from-[#070b14] via-[#0a1020] to-black"
-                : "bg-gradient-to-b from-white via-[#eff2f8] to-[#dfe5f1]")
-            }
-          />
-          <MockPhoneUI variant={variant} />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute left-1/2 top-[12px] h-[14px] w-[60px] -translate-x-1/2 rounded-full bg-black/90 ring-1 ring-white/10"
-          />
-        </div>
-      </div>
+      <PhoneFrame src={src} alt={alt} size="small" />
       <div
         className={
           "absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider ring-1 " +
@@ -434,91 +434,6 @@ function ThemePhone({ variant }: { variant: "light" | "dark" }) {
       >
         {isDark ? <Moon size={10} /> : <Sun size={10} />}
         {isDark ? "Night" : "Day"}
-      </div>
-    </div>
-  );
-}
-
-function MockPhoneUI({ variant }: { variant: "light" | "dark" }) {
-  const isDark = variant === "dark";
-  const bar = isDark ? "bg-white/10" : "bg-black/[0.08]";
-  const barStrong = isDark ? "bg-white/20" : "bg-black/15";
-  const card = isDark
-    ? "bg-white/[0.05] ring-1 ring-white/10"
-    : "bg-white ring-1 ring-black/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.04)]";
-  const dpadRing = isDark ? "ring-brand-400/40" : "ring-brand-500/30";
-  const dpadBg = isDark ? "bg-brand-500/25" : "bg-brand-500/10";
-  const dpadCenter = isDark ? "bg-brand-400/70" : "bg-brand-500/80";
-  const label = isDark ? "text-white/75" : "text-black/70";
-
-  return (
-    <div className="absolute inset-0 flex flex-col px-3.5 pt-8 pb-3">
-      <div className="flex items-center justify-between">
-        <span
-          className={
-            "inline-flex h-4 items-center rounded-full px-1.5 text-[8px] font-mono uppercase tracking-wider " +
-            (isDark
-              ? "bg-white/10 text-white/75"
-              : "bg-black/[0.06] text-black/70")
-          }
-        >
-          Lumina Go
-        </span>
-        <div className={"h-1.5 w-4 rounded-full " + barStrong} />
-      </div>
-
-      <div className={"mt-3 h-1.5 w-14 rounded-full " + bar} />
-      <div className={"mt-1 h-1.5 w-8 rounded-full " + bar} />
-
-      <div className="mt-3 grid grid-cols-3 gap-1">
-        <div className={"h-5 rounded-md " + card} />
-        <div className={"h-5 rounded-md " + card} />
-        <div className={"h-5 rounded-md " + card} />
-      </div>
-
-      <div className="relative mt-4 flex items-center justify-center">
-        <div
-          className={
-            "relative flex h-[82px] w-[82px] items-center justify-center rounded-full ring-2 " +
-            dpadBg +
-            " " +
-            dpadRing
-          }
-        >
-          <div className={"h-[26px] w-[26px] rounded-full " + dpadCenter} />
-          <div
-            className={
-              "absolute top-1 left-1/2 -translate-x-1/2 h-1 w-4 rounded-full " +
-              barStrong
-            }
-          />
-          <div
-            className={
-              "absolute bottom-1 left-1/2 -translate-x-1/2 h-1 w-4 rounded-full " +
-              barStrong
-            }
-          />
-          <div
-            className={
-              "absolute left-1 top-1/2 -translate-y-1/2 h-4 w-1 rounded-full " +
-              barStrong
-            }
-          />
-          <div
-            className={
-              "absolute right-1 top-1/2 -translate-y-1/2 h-4 w-1 rounded-full " +
-              barStrong
-            }
-          />
-        </div>
-      </div>
-
-      <div className="mt-auto flex items-center justify-between gap-2">
-        <div className={"h-1.5 flex-1 rounded-full " + bar} />
-        <div className={"text-[8px] font-mono " + label}>
-          {isDark ? "00:42" : "20:15"}
-        </div>
-        <div className={"h-1.5 flex-1 rounded-full " + bar} />
       </div>
     </div>
   );
