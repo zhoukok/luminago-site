@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s · Lumina Go",
   },
   description:
-    "The Bluetooth LE remote app for WEMI and LYNCAST projectors. 50+ voice commands, air mouse, full keyboard, touchpad and media keys — all over a direct BLE link. Free, offline, no ads.",
+    "The Bluetooth LE remote app for WEMI and LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice and text-to-device — six modes in one app, all over a direct BLE link. Free, offline, no ads.",
   applicationName: "Lumina Go",
   authors: [{ name: "Chengdu Hotack Technology Co., Ltd.", url: SITE_URL }],
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lumina Go — Put away the plastic remote.",
     description:
-      "Bluetooth LE remote app for WEMI / LYNCAST projectors. 50+ voice commands, air mouse, full keyboard, media keys. Free, offline, no ads.",
+      "Bluetooth LE remote app for WEMI / LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice and text — six modes, all over direct BLE. Free, offline, no ads.",
     url: SITE_URL,
     siteName: "Lumina Go",
     images: [
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lumina Go — Put away the plastic remote.",
     description:
-      "Bluetooth LE remote app for WEMI / LYNCAST projectors. Voice, air mouse, keyboard, media keys — all free, all offline.",
+      "Bluetooth LE remote app for WEMI / LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice and text — all free, all offline.",
     images: ["/screenshots/s1.png"],
   },
   icons: {

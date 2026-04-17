@@ -3,24 +3,24 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  Bluetooth,
+  Gamepad2,
+  Keyboard,
+  Hand,
   MousePointer2,
   Mic,
-  Keyboard,
-  PlayCircle,
-  MessageCircle,
+  Type,
   Check,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 
 const ICONS: ReactNode[] = [
-  <Bluetooth key="bt" size={20} className="text-brand-200" />,
+  <Gamepad2 key="gp" size={20} className="text-brand-200" />,
+  <Keyboard key="kb" size={20} className="text-brand-200" />,
+  <Hand key="hd" size={20} className="text-brand-200" />,
   <MousePointer2 key="mm" size={20} className="text-brand-200" />,
   <Mic key="mic" size={20} className="text-brand-200" />,
-  <Keyboard key="kb" size={20} className="text-brand-200" />,
-  <PlayCircle key="pc" size={20} className="text-brand-200" />,
-  <MessageCircle key="mc" size={20} className="text-brand-200" />,
+  <Type key="tp" size={20} className="text-brand-200" />,
 ];
 
 const SHOTS = [
@@ -62,7 +62,7 @@ export function Features() {
               icon={ICONS[i]}
               shot={SHOTS[i]}
               reverse={i % 2 === 1}
-              highlight={i === 2}
+              highlight={i === 4}
             />
           ))}
         </div>
