@@ -388,41 +388,52 @@ function ChatBubble({
 
 function ThemeCard() {
   return (
-    <div className="relative">
+    <div className="relative flex items-center justify-center pr-4 pl-4 sm:pr-8 sm:pl-8">
       <div
         aria-hidden
-        className="pointer-events-none absolute -inset-8 -z-10 rounded-[48px] bg-brand-500/10 blur-3xl"
+        className="pointer-events-none absolute -inset-10 -z-10 rounded-[48px] bg-brand-500/10 blur-3xl"
       />
-      <div className="relative mx-auto aspect-[9/19.5] w-[240px] sm:w-[260px] lg:w-[300px] overflow-hidden rounded-[42px] border border-white/15 bg-black p-[6px] shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)] ring-1 ring-white/5">
-        <div className="relative h-full w-full overflow-hidden rounded-[36px]">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#070b14] via-[#0a1020] to-black">
-            <MockPhoneUI variant="dark" />
-          </div>
+      <div className="relative -mr-6 sm:-mr-10 translate-y-2 -rotate-[6deg]">
+        <ThemePhone variant="light" />
+      </div>
+      <div className="relative z-10 -translate-y-2 rotate-[6deg]">
+        <ThemePhone variant="dark" />
+      </div>
+    </div>
+  );
+}
+
+function ThemePhone({ variant }: { variant: "light" | "dark" }) {
+  const isDark = variant === "dark";
+  return (
+    <div className="relative">
+      <div className="relative mx-auto aspect-[9/19.5] w-[180px] sm:w-[200px] lg:w-[220px] overflow-hidden rounded-[36px] border border-white/15 bg-black p-[5px] shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)] ring-1 ring-white/5">
+        <div className="relative h-full w-full overflow-hidden rounded-[32px]">
           <div
-            className="absolute inset-0 bg-gradient-to-b from-white via-[#eff2f8] to-[#dfe5f1]"
-            style={{
-              clipPath: "polygon(0 0, 100% 0, 100% 48%, 0 52%)",
-            }}
-          >
-            <MockPhoneUI variant="light" />
-          </div>
-
-          <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-            <div className="flex items-center gap-0.5 rounded-full bg-black/85 p-1 ring-1 ring-white/20 shadow-[0_8px_20px_rgba(0,0,0,0.5)] backdrop-blur">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-ink ring-1 ring-black/10">
-                <Sun size={11} />
-              </span>
-              <span className="flex h-6 w-6 items-center justify-center rounded-full text-white/70">
-                <Moon size={11} />
-              </span>
-            </div>
-          </div>
-
+            className={
+              "absolute inset-0 " +
+              (isDark
+                ? "bg-gradient-to-b from-[#070b14] via-[#0a1020] to-black"
+                : "bg-gradient-to-b from-white via-[#eff2f8] to-[#dfe5f1]")
+            }
+          />
+          <MockPhoneUI variant={variant} />
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-[14px] h-[18px] w-[80px] -translate-x-1/2 rounded-full bg-black/90 ring-1 ring-white/10"
+            className="pointer-events-none absolute left-1/2 top-[12px] h-[14px] w-[60px] -translate-x-1/2 rounded-full bg-black/90 ring-1 ring-white/10"
           />
         </div>
+      </div>
+      <div
+        className={
+          "absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider ring-1 " +
+          (isDark
+            ? "bg-black/70 text-white/85 ring-white/20 backdrop-blur"
+            : "bg-white text-ink ring-black/10 shadow-[0_4px_12px_rgba(0,0,0,0.15)]")
+        }
+      >
+        {isDark ? <Moon size={10} /> : <Sun size={10} />}
+        {isDark ? "Night" : "Day"}
       </div>
     </div>
   );
@@ -441,67 +452,73 @@ function MockPhoneUI({ variant }: { variant: "light" | "dark" }) {
   const label = isDark ? "text-white/75" : "text-black/70";
 
   return (
-    <div className="absolute inset-0 flex flex-col px-5 pt-11 pb-4">
+    <div className="absolute inset-0 flex flex-col px-3.5 pt-8 pb-3">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-1.5">
-          <span
-            className={
-              "inline-flex h-4 items-center rounded-full px-1.5 text-[8px] font-mono uppercase tracking-wider " +
-              (isDark ? "bg-white/10 text-white/75" : "bg-black/[0.06] text-black/70")
-            }
-          >
-            {isDark ? "Night" : "Day"}
-          </span>
-        </div>
-        <div className={"h-1.5 w-5 rounded-full " + barStrong} />
+        <span
+          className={
+            "inline-flex h-4 items-center rounded-full px-1.5 text-[8px] font-mono uppercase tracking-wider " +
+            (isDark
+              ? "bg-white/10 text-white/75"
+              : "bg-black/[0.06] text-black/70")
+          }
+        >
+          Lumina Go
+        </span>
+        <div className={"h-1.5 w-4 rounded-full " + barStrong} />
       </div>
 
-      <div className={"mt-4 h-2 w-16 rounded-full " + bar} />
-      <div className={"mt-1.5 h-2 w-10 rounded-full " + bar} />
+      <div className={"mt-3 h-1.5 w-14 rounded-full " + bar} />
+      <div className={"mt-1 h-1.5 w-8 rounded-full " + bar} />
 
-      <div className="mt-4 grid grid-cols-3 gap-1.5">
-        <div className={"h-7 rounded-lg " + card} />
-        <div className={"h-7 rounded-lg " + card} />
-        <div className={"h-7 rounded-lg " + card} />
+      <div className="mt-3 grid grid-cols-3 gap-1">
+        <div className={"h-5 rounded-md " + card} />
+        <div className={"h-5 rounded-md " + card} />
+        <div className={"h-5 rounded-md " + card} />
       </div>
 
-      <div className="relative mt-6 flex items-center justify-center">
+      <div className="relative mt-4 flex items-center justify-center">
         <div
           className={
-            "relative flex h-[110px] w-[110px] items-center justify-center rounded-full ring-2 " +
+            "relative flex h-[82px] w-[82px] items-center justify-center rounded-full ring-2 " +
             dpadBg +
             " " +
             dpadRing
           }
         >
-          <div className={"h-[34px] w-[34px] rounded-full " + dpadCenter} />
+          <div className={"h-[26px] w-[26px] rounded-full " + dpadCenter} />
           <div
             className={
-              "absolute top-1.5 left-1/2 -translate-x-1/2 h-1.5 w-6 rounded-full " + barStrong
+              "absolute top-1 left-1/2 -translate-x-1/2 h-1 w-4 rounded-full " +
+              barStrong
             }
           />
           <div
             className={
-              "absolute bottom-1.5 left-1/2 -translate-x-1/2 h-1.5 w-6 rounded-full " + barStrong
+              "absolute bottom-1 left-1/2 -translate-x-1/2 h-1 w-4 rounded-full " +
+              barStrong
             }
           />
           <div
             className={
-              "absolute left-1.5 top-1/2 -translate-y-1/2 h-6 w-1.5 rounded-full " + barStrong
+              "absolute left-1 top-1/2 -translate-y-1/2 h-4 w-1 rounded-full " +
+              barStrong
             }
           />
           <div
             className={
-              "absolute right-1.5 top-1/2 -translate-y-1/2 h-6 w-1.5 rounded-full " + barStrong
+              "absolute right-1 top-1/2 -translate-y-1/2 h-4 w-1 rounded-full " +
+              barStrong
             }
           />
         </div>
       </div>
 
-      <div className="mt-auto flex items-center justify-between">
-        <div className={"h-1.5 w-8 rounded-full " + bar} />
-        <div className={"text-[8px] font-mono " + label}>{isDark ? "00:42" : "20:15"}</div>
-        <div className={"h-1.5 w-8 rounded-full " + bar} />
+      <div className="mt-auto flex items-center justify-between gap-2">
+        <div className={"h-1.5 flex-1 rounded-full " + bar} />
+        <div className={"text-[8px] font-mono " + label}>
+          {isDark ? "00:42" : "20:15"}
+        </div>
+        <div className={"h-1.5 flex-1 rounded-full " + bar} />
       </div>
     </div>
   );
