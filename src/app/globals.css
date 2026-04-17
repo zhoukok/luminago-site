@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html, body {
+    background: #05050c;
+    color: #E8EAF6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: radial-gradient(circle at 50% -10%, rgba(0,15,240,0.22), transparent 60%),
+                radial-gradient(circle at 95% 15%, rgba(92,106,255,0.12), transparent 50%),
+                #05050c;
+  }
+  ::selection {
+    background: rgba(0, 15, 240, 0.55);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #fff 0%, #8A94FF 55%, #000FF0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: saturate(140%) blur(20px);
+    -webkit-backdrop-filter: saturate(140%) blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .shine-overlay {
+    background: linear-gradient(100deg,
+      transparent 30%,
+      rgba(255,255,255,0.15) 45%,
+      rgba(255,255,255,0.3) 50%,
+      rgba(255,255,255,0.15) 55%,
+      transparent 70%);
+    background-size: 200% 100%;
+    animation: shine 2.2s linear infinite;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);
+  }
+}
