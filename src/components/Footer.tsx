@@ -9,7 +9,6 @@ export function Footer() {
 
   const product = [
     { label: t.footer.links.features, href: "#features" },
-    { label: t.footer.links.app, href: "#showcase" },
     { label: t.footer.links.download, href: "#download" },
   ];
   const legal = [

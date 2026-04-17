@@ -2,8 +2,6 @@ import type { Dict } from "./types";
 
 export const es: Dict = {
   nav: {
-    features: "Funciones",
-    app: "App",
     download: "Descargar",
   },
   hero: {
@@ -25,36 +23,66 @@ export const es: Dict = {
       "Todo corre en tu móvil y habla directamente con tu proyector por Bluetooth LE. Sin nube, sin rastreo.",
     items: [
       {
-        title: "Mando Bluetooth LE",
-        desc: "Respuesta de menos de 20 ms, alcance de 10 m. Funciona en cuanto abres la app — sin Wi-Fi, sin emparejamiento, sin línea de visión.",
+        eyebrow: "01 — Control base",
+        title: "Un mando que responde al instante.",
+        desc: "Bluetooth LE mantiene la latencia por debajo de 20 ms desde que pulsas hasta que el píxel cambia en la pared. Sin calentamiento, sin asistente de emparejamiento, sin línea de visión — abres la app y ya estás conectado.",
+        bullets: [
+          "Respuesta del D-Pad < 20 ms",
+          "Alcance estable de 10 m",
+          "Sin Wi-Fi y sin cuenta",
+        ],
       },
       {
-        title: "Ratón Aéreo",
-        desc: "Agita el móvil y mueve el cursor. Giroscopio y acelerómetro fusionados localmente para un seguimiento fluido en cualquier orientación.",
+        eyebrow: "02 — Ratón aéreo",
+        title: "Tu móvil es el ratón.",
+        desc: "El giroscopio y el acelerómetro se fusionan en el dispositivo para crear un cursor 2D fluido. Mueve el móvil para desplazar, toca para hacer clic — funciona en vertical, horizontal, al revés, y se recentra al vuelo.",
+        bullets: [
+          "Fusión de 9 ejes en el dispositivo",
+          "Funciona en cualquier orientación",
+          "Recentrado y sensibilidad con un toque",
+        ],
       },
       {
-        title: "Comandos de Voz",
-        desc: "Di \u201cAbre Netflix\u201d, \u201cVolumen 30\u201d, \u201cSiguiente episodio\u201d. 50+ acciones del proyector (apps, reproducción, volumen, fuente) analizadas en tu móvil, nunca en la nube.",
+        eyebrow: "03 — Voz",
+        title: "«Abre Netflix. Volumen 30».",
+        desc: "Habla con naturalidad — sin palabra de activación, sin viaje a la nube. Más de 50 intenciones de proyector (apps, reproducción, volumen, fuente, pantalla) se analizan en tu móvil y se convierten en comandos BLE en un solo salto.",
+        bullets: [
+          "50+ intenciones integradas",
+          "Análisis local — nada sale del móvil",
+          "Inglés, 中文, 日本語, Español",
+        ],
       },
       {
-        title: "Teclado & Touchpad",
-        desc: "Escribe contraseñas Wi-Fi y búsquedas con un teclado real. Desliza menús con un touchpad de clase portátil.",
+        eyebrow: "04 — Entrada",
+        title: "Un teclado real para escribir de verdad.",
+        desc: "Contraseñas Wi-Fi, búsquedas, inicios de sesión — escríbelos con un QWERTY completo que aparece justo cuando lo necesitas. Debajo, un touchpad de calidad permite hacer scroll, arrastrar y gestos multitoque.",
+        bullets: [
+          "QWERTY completo con autocompletar",
+          "Scroll y pellizco con dos dedos",
+          "Toque, pulsación larga y arrastre",
+        ],
       },
       {
-        title: "Teclas Multimedia",
-        desc: "Reproduce, pausa, siguiente episodio y avance rápido con un toque. Probado en Netflix, YouTube, Disney+, Hulu, HBO Max y más.",
+        eyebrow: "05 — Reproducción",
+        title: "Play, pausa, siguiente episodio.",
+        desc: "Teclas multimedia dedicadas manejan las apps de streaming que realmente usas. Toca para reproducir o pausar, doble toque para saltar, pulsación larga para avanzar. Probado de extremo a extremo en las plataformas principales.",
+        bullets: [
+          "Verificado en Netflix, YouTube, Disney+, Hulu, HBO Max",
+          "Saltar, buscar y ajustar volumen desde un panel tipo lock-screen",
+          "Feedback háptico sutil en cada acción",
+        ],
       },
       {
-        title: "AI Smart Help",
-        desc: "¿Atascado en la configuración? Abre el chat integrado y obtén respuestas adaptadas a tu modelo y firmware.",
+        eyebrow: "06 — Soporte",
+        title: "Nunca te quedes atascado.",
+        desc: "Un asistente dentro de la app responde a dudas de configuración, emparejamiento, Wi-Fi, firmware y mando — adaptadas al modelo exacto de proyector que tienes en la mano. Escríbelo en cualquier idioma; te contesta en el tuyo.",
+        bullets: [
+          "Respuestas según modelo y firmware",
+          "Chat en 4 idiomas",
+          "Enlace directo a la página del manual",
+        ],
       },
     ],
-  },
-  showcase: {
-    section_eyebrow: "Míralo en acción",
-    section_title: "Diseñado para una mano. Hecho para el sofá.",
-    section_lead:
-      "Seis pantallas, carga mental cero. Cada botón está al alcance del pulgar.",
   },
   download: {
     section_eyebrow: "Obtén la app",
@@ -79,7 +107,6 @@ export const es: Dict = {
     },
     links: {
       features: "Funciones",
-      app: "Vista previa",
       download: "Descargar",
       privacy: "Política de privacidad",
       terms: "Términos de uso",

@@ -2,8 +2,6 @@ export type Lang = "en" | "zh" | "ja" | "es";
 
 export interface Dict {
   nav: {
-    features: string;
-    app: string;
     download: string;
   };
   hero: {
@@ -21,12 +19,12 @@ export interface Dict {
     section_eyebrow: string;
     section_title: string;
     section_lead: string;
-    items: Array<{ title: string; desc: string }>;
-  };
-  showcase: {
-    section_eyebrow: string;
-    section_title: string;
-    section_lead: string;
+    items: Array<{
+      eyebrow: string;
+      title: string;
+      desc: string;
+      bullets: [string, string, string];
+    }>;
   };
   download: {
     section_eyebrow: string;
@@ -49,7 +47,6 @@ export interface Dict {
     };
     links: {
       features: string;
-      app: string;
       download: string;
       privacy: string;
       terms: string;

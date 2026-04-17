@@ -2,8 +2,6 @@ import type { Dict } from "./types";
 
 export const en: Dict = {
   nav: {
-    features: "Features",
-    app: "App",
     download: "Download",
   },
   hero: {
@@ -25,36 +23,66 @@ export const en: Dict = {
       "Everything runs on your phone and speaks directly to your projector over Bluetooth LE. No cloud, no tracking.",
     items: [
       {
-        title: "Bluetooth LE Remote",
-        desc: "Sub-20 ms D-pad response at up to 10 m. Works the instant you open the app — no Wi-Fi, no pairing drama, no line of sight.",
+        eyebrow: "01 — Core control",
+        title: "A remote that actually feels instant.",
+        desc: "Bluetooth LE keeps latency under 20 ms from the moment you tap a button to the pixel on the wall. There's no warm-up, no pairing wizard, no line of sight to worry about — open the app, you're connected.",
+        bullets: [
+          "Sub-20 ms D-pad response",
+          "Reliable 10 m working range",
+          "No Wi-Fi and no account needed",
+        ],
       },
       {
-        title: "Air Mouse",
-        desc: "Wave your phone, move the cursor. Gyroscope + accelerometer fused on-device for buttery-smooth tracking in any orientation.",
+        eyebrow: "02 — Air mouse",
+        title: "Your phone is the mouse.",
+        desc: "Gyroscope and accelerometer readings are fused on-device into a smooth 2D cursor. Wave your phone to move, tap to click — works in portrait, landscape, upside down, and recenters itself on the fly.",
+        bullets: [
+          "9-axis sensor fusion on-device",
+          "Works in any phone orientation",
+          "One-tap recenter & sensitivity tuning",
+        ],
       },
       {
-        title: "Voice Commands",
-        desc: "Say \u201cOpen Netflix\u201d, \u201cVolume 30\u201d, \u201cNext episode\u201d. 50+ projector actions — apps, playback, volume, source — parsed on your phone, never sent to the cloud.",
+        eyebrow: "03 — Voice",
+        title: "“Open Netflix. Volume 30.”",
+        desc: "Speak naturally — no wake word, no cloud round-trip. 50+ projector intents (apps, playback, volume, source, display) are parsed locally on your phone and turned into BLE commands in a single hop.",
+        bullets: [
+          "50+ built-in intents across apps & playback",
+          "On-device parsing — nothing leaves the phone",
+          "Works in English, 中文, 日本語, Español",
+        ],
       },
       {
-        title: "Full Keyboard & Touchpad",
-        desc: "Type Wi-Fi passwords and search queries with a real keyboard. Swipe through menus with a trackpad-class touchpad.",
+        eyebrow: "04 — Input",
+        title: "A real keyboard for real typing.",
+        desc: "Wi-Fi passwords, search queries, account logins — type them with a full QWERTY keyboard that appears exactly when you need it. Below it, a trackpad-grade touchpad handles scroll, drag, and multi-finger gestures.",
+        bullets: [
+          "Full QWERTY with autocomplete",
+          "Two-finger scroll & pinch",
+          "Tap, long-press, and drag from the touchpad",
+        ],
       },
       {
-        title: "Media Keys",
-        desc: "One-tap play, pause, next episode, fast-forward. Verified working on Netflix, YouTube, Disney+, Hulu, HBO Max and more.",
+        eyebrow: "05 — Playback",
+        title: "Play, pause, next episode.",
+        desc: "Dedicated media keys drive the streaming apps you actually use. One tap plays or pauses, double-tap skips, long-press seeks. Tested end-to-end on the major platforms so muscle memory just works.",
+        bullets: [
+          "Verified on Netflix, YouTube, Disney+, Hulu, HBO Max",
+          "Skip, seek, and volume from the lockscreen-style panel",
+          "Subtle haptic feedback on every action",
+        ],
       },
       {
-        title: "AI Smart Help",
-        desc: "Stuck on setup? Open the built-in chat and get answers tailored to your projector model and firmware.",
+        eyebrow: "06 — Support",
+        title: "Never get stuck on setup.",
+        desc: "An in-app assistant answers setup, pairing, Wi-Fi, firmware, and remote questions — tailored to the exact projector model you're holding. Typed in English, answered in your language.",
+        bullets: [
+          "Model- and firmware-aware answers",
+          "Chat in 4 languages",
+          "One-tap link to the right user manual page",
+        ],
       },
     ],
-  },
-  showcase: {
-    section_eyebrow: "See it in action",
-    section_title: "Designed for one-hand. Built for the couch.",
-    section_lead:
-      "Six screens, zero cognitive load. Every surface is reachable with your thumb.",
   },
   download: {
     section_eyebrow: "Get the app",
@@ -79,7 +107,6 @@ export const en: Dict = {
     },
     links: {
       features: "Features",
-      app: "App preview",
       download: "Download",
       privacy: "Privacy Policy",
       terms: "Terms of Use",
