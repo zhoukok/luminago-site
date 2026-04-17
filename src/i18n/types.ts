@@ -25,6 +25,13 @@ export interface Dict {
       desc: string;
       bullets: [string, string, string];
     }>;
+    closing: {
+      eyebrow: string;
+      title: string;
+      desc: string;
+      cta_label: string;
+      cta_href: string;
+    };
   };
   download: {
     section_eyebrow: string;

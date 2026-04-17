@@ -5,31 +5,44 @@ import { motion } from "framer-motion";
 import {
   Gamepad2,
   Keyboard,
-  Hand,
   MousePointer2,
   Mic,
   Type,
+  Sparkles,
   Check,
+  Mail,
+  ArrowRight,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 
+type Visual =
+  | { type: "phone"; src: string }
+  | { type: "dual"; srcA: string; srcB: string }
+  | { type: "chat" };
+
+// Scenario → icon
 const ICONS: ReactNode[] = [
   <Gamepad2 key="gp" size={20} className="text-brand-200" />,
-  <Keyboard key="kb" size={20} className="text-brand-200" />,
-  <Hand key="hd" size={20} className="text-brand-200" />,
   <MousePointer2 key="mm" size={20} className="text-brand-200" />,
-  <Mic key="mic" size={20} className="text-brand-200" />,
+  <Keyboard key="kb" size={20} className="text-brand-200" />,
   <Type key="tp" size={20} className="text-brand-200" />,
+  <Mic key="mic" size={20} className="text-brand-200" />,
+  <Sparkles key="sp" size={20} className="text-brand-200" />,
 ];
 
-const SHOTS = [
-  "/screenshots/s1.png",
-  "/screenshots/s2.png",
-  "/screenshots/s3.png",
-  "/screenshots/s4.png",
-  "/screenshots/s5.png",
-  "/screenshots/s6.png",
+// Scenario → visual
+const VISUALS: Visual[] = [
+  { type: "phone", src: "/screenshots/s1.png" }, // 01 Remote
+  {
+    type: "dual",
+    srcA: "/screenshots/s3.png",
+    srcB: "/screenshots/s4.png",
+  }, // 02 Touchpad + Air mouse
+  { type: "phone", src: "/screenshots/s2.png" }, // 03 Keyboard
+  { type: "phone", src: "/screenshots/s6.png" }, // 04 Text
+  { type: "phone", src: "/screenshots/s5.png" }, // 05 Voice
+  { type: "chat" }, // 06 AI help
 ];
 
 export function Features() {
@@ -60,12 +73,20 @@ export function Features() {
               desc={item.desc}
               bullets={item.bullets}
               icon={ICONS[i]}
-              shot={SHOTS[i]}
+              visual={VISUALS[i]}
               reverse={i % 2 === 1}
               highlight={i === 4}
             />
           ))}
         </div>
+
+        <ClosingCard
+          eyebrow={t.features.closing.eyebrow}
+          title={t.features.closing.title}
+          desc={t.features.closing.desc}
+          ctaLabel={t.features.closing.cta_label}
+          ctaHref={t.features.closing.cta_href}
+        />
       </div>
     </section>
   );
@@ -78,7 +99,7 @@ function FeatureRow({
   desc,
   bullets,
   icon,
-  shot,
+  visual,
   reverse,
   highlight,
 }: {
@@ -88,7 +109,7 @@ function FeatureRow({
   desc: string;
   bullets: [string, string, string];
   icon: ReactNode;
-  shot: string;
+  visual: Visual;
   reverse: boolean;
   highlight: boolean;
 }) {
@@ -149,7 +170,7 @@ function FeatureRow({
             </div>
             {highlight && (
               <span className="rounded-full bg-brand-500/25 px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider text-brand-100 ring-1 ring-brand-400/40">
-                Core feature
+                Most loved
               </span>
             )}
           </div>
@@ -208,16 +229,43 @@ function FeatureRow({
           />
         </div>
 
-        <PhoneFrame src={shot} alt={title} />
+        <VisualRenderer visual={visual} alt={title} />
       </motion.div>
     </div>
   );
 }
 
-function PhoneFrame({ src, alt }: { src: string; alt: string }) {
+function VisualRenderer({ visual, alt }: { visual: Visual; alt: string }) {
+  if (visual.type === "phone") {
+    return <PhoneFrame src={visual.src} alt={alt} />;
+  }
+  if (visual.type === "dual") {
+    return <DualPhones srcA={visual.srcA} srcB={visual.srcB} alt={alt} />;
+  }
+  return <ChatCard />;
+}
+
+function PhoneFrame({
+  src,
+  alt,
+  size = "default",
+}: {
+  src: string;
+  alt: string;
+  size?: "default" | "small";
+}) {
+  const sizeClasses =
+    size === "small"
+      ? "w-[180px] sm:w-[200px] lg:w-[220px]"
+      : "w-[240px] sm:w-[260px] lg:w-[300px]";
   return (
     <div className="relative">
-      <div className="relative mx-auto aspect-[9/19.5] w-[240px] sm:w-[260px] lg:w-[300px] overflow-hidden rounded-[42px] border border-white/15 bg-black p-[6px] shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)] ring-1 ring-white/5">
+      <div
+        className={
+          "relative mx-auto aspect-[9/19.5] overflow-hidden rounded-[42px] border border-white/15 bg-black p-[6px] shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)] ring-1 ring-white/5 " +
+          sizeClasses
+        }
+      >
         <div className="relative h-full w-full overflow-hidden rounded-[36px]">
           <Image
             src={src}
@@ -233,9 +281,159 @@ function PhoneFrame({ src, alt }: { src: string; alt: string }) {
         </div>
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[14px] h-[22px] w-[92px] -translate-x-1/2 rounded-full bg-black/90 ring-1 ring-white/10"
+          className="pointer-events-none absolute left-1/2 top-[14px] h-[18px] w-[80px] -translate-x-1/2 rounded-full bg-black/90 ring-1 ring-white/10"
         />
       </div>
     </div>
+  );
+}
+
+function DualPhones({
+  srcA,
+  srcB,
+  alt,
+}: {
+  srcA: string;
+  srcB: string;
+  alt: string;
+}) {
+  return (
+    <div className="relative flex items-center justify-center pr-4 pl-4 sm:pr-8 sm:pl-8">
+      <div className="relative -mr-6 sm:-mr-10 translate-y-2 -rotate-[6deg]">
+        <PhoneFrame src={srcA} alt={alt + " — touchpad"} size="small" />
+      </div>
+      <div className="relative z-10 -translate-y-2 rotate-[6deg]">
+        <PhoneFrame src={srcB} alt={alt + " — air mouse"} size="small" />
+      </div>
+    </div>
+  );
+}
+
+function ChatCard() {
+  return (
+    <div className="relative w-full max-w-[340px]">
+      <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.02] to-white/[0.01] p-5 shadow-[0_40px_100px_-20px_rgba(0,15,240,0.45)] ring-1 ring-white/5 backdrop-blur">
+        <div className="flex items-center gap-2.5 pb-4 border-b border-white/10">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-500/25 ring-1 ring-brand-400/50">
+            <Sparkles size={14} className="text-brand-100" />
+          </div>
+          <div>
+            <div className="text-[13px] font-medium text-white/90 leading-none">
+              AI Projector Assistant
+            </div>
+            <div className="mt-1 text-[10px] font-mono uppercase tracking-wider text-white/40">
+              ChatGPT-class · model-aware
+            </div>
+          </div>
+          <div className="ml-auto flex items-center gap-1 text-[10px] font-mono text-emerald-300/80">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            online
+          </div>
+        </div>
+
+        <div className="space-y-3 pt-4">
+          <ChatBubble role="user" text="Why is my image coming out green?" />
+          <ChatBubble
+            role="assistant"
+            text="Sounds like an RGB channel misalignment. On your projector, open Settings → Color → Reset. If it persists, try a different HDMI cable — worn-out cables drop the red channel first."
+          />
+          <ChatBubble role="user" text="How do I enter Bluetooth-speaker mode?" />
+        </div>
+
+        <div className="mt-4 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[12px] text-white/40">
+          Ask anything about your projector…
+        </div>
+      </div>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -inset-4 -z-10 rounded-[36px] bg-brand-500/10 blur-2xl"
+      />
+    </div>
+  );
+}
+
+function ChatBubble({
+  role,
+  text,
+}: {
+  role: "user" | "assistant";
+  text: string;
+}) {
+  const isUser = role === "user";
+  return (
+    <div className={isUser ? "flex justify-end" : "flex justify-start"}>
+      <div
+        className={
+          "max-w-[85%] rounded-2xl px-3.5 py-2 text-[12.5px] leading-relaxed " +
+          (isUser
+            ? "bg-white/[0.08] text-white/85 rounded-br-sm ring-1 ring-white/10"
+            : "bg-brand-500/25 text-brand-50 rounded-bl-sm ring-1 ring-brand-400/30")
+        }
+      >
+        {text}
+      </div>
+    </div>
+  );
+}
+
+function ClosingCard({
+  eyebrow,
+  title,
+  desc,
+  ctaLabel,
+  ctaHref,
+}: {
+  eyebrow: string;
+  title: string;
+  desc: string;
+  ctaLabel: string;
+  ctaHref: string;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className="relative mt-28 sm:mt-36"
+    >
+      <div className="relative overflow-hidden rounded-3xl border border-brand-400/30 bg-gradient-to-br from-brand-500/15 via-white/[0.02] to-white/[0.01] px-6 py-10 sm:px-12 sm:py-14 ring-1 ring-brand-400/20 shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)]">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-20 -right-20 h-64 w-64 rounded-full bg-brand-500/25 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-brand-400/15 blur-3xl"
+        />
+
+        <div className="relative max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-500/25 px-3 py-1 text-[11px] font-mono uppercase tracking-wider text-brand-100 ring-1 ring-brand-400/50">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-300" />
+            {eyebrow}
+          </div>
+
+          <h3 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
+            {title}
+          </h3>
+
+          <p className="mt-4 text-white/75 text-base sm:text-lg leading-relaxed">
+            {desc}
+          </p>
+
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <a
+              href={ctaHref}
+              className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-ink hover:bg-brand-50 transition"
+            >
+              <Mail size={14} />
+              {ctaLabel}
+              <ArrowRight size={14} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </motion.div>
   );
 }
