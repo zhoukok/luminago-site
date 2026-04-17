@@ -6,7 +6,7 @@ export const en: Dict = {
   },
   hero: {
     badge: "More than a remote · your AI projector concierge",
-    title_line1: "The last missing piece",
+    title_line1: "The last missing piece ",
     title_line2: "of your projector.",
     tagline:
       "Where tedious typing flows at your fingertip. Remote, keyboard, touchpad, air mouse, voice and text — six control modes, one direct BLE link, one app.",

@@ -39,11 +39,9 @@ export function Hero() {
             <span>{t.hero.badge}</span>
           </div>
 
-          <h1 className="text-[44px] sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.04]">
-            <span className="block text-white">{t.hero.title_line1}</span>
-            <span className="block text-gradient-brand">
-              {t.hero.title_line2}
-            </span>
+          <h1 className="text-[38px] sm:text-[56px] lg:text-[64px] font-bold tracking-tight leading-[1.1] text-balance">
+            <span className="text-white">{t.hero.title_line1}</span>
+            <span className="text-gradient-brand">{t.hero.title_line2}</span>
           </h1>
 
           <p className="mx-auto mt-7 max-w-2xl text-base sm:text-lg text-white/70 leading-relaxed">
@@ -89,51 +87,44 @@ function Chip({ label }: { label: string }) {
 }
 
 function PhoneTrio() {
-  const phones = [
-    { src: "/screenshots/s2.png", side: "left" as const },
-    { src: "/screenshots/s1.png", side: "center" as const },
-    { src: "/screenshots/s3.png", side: "right" as const },
-  ];
-
   return (
-    <div className="relative mx-auto mt-20 sm:mt-24 flex h-[560px] sm:h-[660px] lg:h-[720px] items-end justify-center">
-      {phones.map((p, i) => {
-        const isCenter = p.side === "center";
-        const delay = isCenter ? 0.15 : 0.25 + i * 0.05;
+    <div className="relative mx-auto mt-16 sm:mt-20 flex items-end justify-center">
+      <motion.div
+        className="hidden sm:block relative z-10 -mr-10 lg:-mr-14"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <div
+          className="origin-bottom-right"
+          style={{ transform: "rotate(-7deg) scale(0.86)" }}
+        >
+          <PhoneMockup src="/screenshots/s2.png" size="md" />
+        </div>
+      </motion.div>
 
-        const transform =
-          p.side === "left"
-            ? "translateX(calc(50% - 38%)) rotate(-7deg) scale(0.86)"
-            : p.side === "right"
-            ? "translateX(calc(-50% + 38%)) rotate(7deg) scale(0.86)"
-            : "translateX(-50%) rotate(0deg) scale(1)";
+      <motion.div
+        className="relative z-20"
+        initial={{ opacity: 0, y: 48 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <PhoneMockup src="/screenshots/s1.png" size="lg" priority />
+      </motion.div>
 
-        return (
-          <motion.div
-            key={p.src}
-            initial={{ opacity: 0, y: 48, scale: 0.92 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.65, delay, ease: [0.16, 1, 0.3, 1] }}
-            className={[
-              "absolute left-1/2 bottom-0",
-              p.side === "left" || p.side === "right"
-                ? "hidden sm:block"
-                : "",
-              isCenter ? "z-20" : "z-10",
-            ].join(" ")}
-            style={{
-              transformOrigin: "bottom center",
-              transform,
-            }}
-          >
-            <PhoneMockup
-              src={p.src}
-              size={isCenter ? "lg" : "md"}
-              priority={isCenter}
-            />
-          </motion.div>
-        );
-      })}
+      <motion.div
+        className="hidden sm:block relative z-10 -ml-10 lg:-ml-14"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <div
+          className="origin-bottom-left"
+          style={{ transform: "rotate(7deg) scale(0.86)" }}
+        >
+          <PhoneMockup src="/screenshots/s3.png" size="md" />
+        </div>
+      </motion.div>
     </div>
   );
 }

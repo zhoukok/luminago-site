@@ -6,7 +6,7 @@ export const es: Dict = {
   },
   hero: {
     badge: "Más que un mando · tu copiloto IA para proyectores",
-    title_line1: "La última pieza",
+    title_line1: "La última pieza ",
     title_line2: "de tu proyector.",
     tagline:
       "Que el tedio del tecleo fluya entre tus dedos. Mando, teclado, touchpad, ratón aéreo, voz y texto — seis modos, un enlace BLE directo, una app.",
