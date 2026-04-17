@@ -22,9 +22,8 @@ export function Navbar() {
 
   const links = [
     { href: "#features", label: t.nav.features },
-    { href: "#ecosystem", label: t.nav.ecosystem },
-    { href: "#showcase", label: t.nav.showcase },
-    { href: "#developers", label: t.nav.developers },
+    { href: "#showcase", label: t.nav.app },
+    { href: "#download", label: t.nav.download },
   ];
 
   return (

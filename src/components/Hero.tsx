@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Apple, Play, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { ButtonLink } from "@/components/ui/Button";
 
@@ -10,105 +10,172 @@ export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section id="top" className="relative overflow-hidden pt-40 pb-28 sm:pt-48 sm:pb-32">
+    <section
+      id="top"
+      className="relative overflow-hidden pt-36 pb-24 sm:pt-44 sm:pb-28"
+    >
       <div className="absolute inset-0 grid-bg pointer-events-none" aria-hidden />
+      <div
+        className="absolute inset-x-0 top-32 mx-auto h-[420px] max-w-4xl rounded-full opacity-60 blur-[120px] pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 40%, rgba(0,15,240,0.45), transparent 65%)",
+        }}
+        aria-hidden
+      />
+
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto max-w-3xl text-center"
         >
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/10 px-4 py-1.5 text-sm text-brand-100">
-            <Sparkles size={14} className="text-brand-300" />
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/10 px-4 py-1.5 text-[13px] text-brand-100">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-300" />
+            </span>
             <span>{t.hero.badge}</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
+          <h1 className="text-[44px] sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.04]">
             <span className="block text-white">{t.hero.title_line1}</span>
             <span className="block text-gradient-brand">
               {t.hero.title_line2}
             </span>
           </h1>
 
-          <p className="mt-8 text-lg sm:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="mx-auto mt-7 max-w-2xl text-base sm:text-lg text-white/70 leading-relaxed">
             {t.hero.tagline}
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3" id="download">
-            <ButtonLink
-              href="https://apps.apple.com/app/lumina-go"
-              variant="primary"
-              size="lg"
-              target="_blank"
-              rel="noopener"
-            >
-              <Apple size={18} />
-              {t.hero.cta_ios}
+          <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <ButtonLink href="#download" variant="primary" size="lg">
+              <Download size={17} />
+              {t.hero.cta_primary}
             </ButtonLink>
-            <ButtonLink
-              href="https://play.google.com/store/apps/details?id=com.htc.btremote.remote"
-              variant="secondary"
-              size="lg"
-              target="_blank"
-              rel="noopener"
-            >
-              <Play size={16} />
-              {t.hero.cta_android}
-            </ButtonLink>
-            <ButtonLink
-              href="https://docs.luminago.app"
-              variant="ghost"
-              size="lg"
-              target="_blank"
-              rel="noopener"
-            >
-              {t.hero.cta_docs}
-              <ArrowRight size={16} />
+            <ButtonLink href="#features" variant="ghost" size="lg">
+              {t.hero.cta_secondary}
+              <ArrowDown size={16} />
             </ButtonLink>
           </div>
-
-          <p className="mt-6 text-xs tracking-wide text-white/45">
-            {t.hero.sub_small}
-          </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 28 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="relative mx-auto mt-16 max-w-4xl"
-        >
-          <div className="relative aspect-[16/8.5] rounded-3xl overflow-hidden bg-glass ring-1 ring-white/10 shadow-[0_40px_120px_-20px_rgba(0,15,240,0.45)]">
-            <Image
-              src="/feature.png"
-              alt="Lumina Go feature"
-              fill
-              priority
-              sizes="(min-width: 1024px) 1024px, 100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent pointer-events-none" />
-          </div>
+        <PhoneTrio />
 
-          <div className="absolute -top-8 -left-8 hidden md:block animate-float-slow">
-            <div className="rounded-2xl bg-glass px-4 py-3 text-sm text-white/80 shadow-2xl">
-              <div className="text-brand-300 text-[11px] uppercase tracking-wider">
-                Latency
-              </div>
-              <div className="font-mono text-xl text-white">≤ 20 ms</div>
-            </div>
-          </div>
-          <div className="absolute -bottom-6 -right-6 hidden md:block animate-float-slow">
-            <div className="rounded-2xl bg-glass px-4 py-3 text-sm text-white/80 shadow-2xl">
-              <div className="text-brand-300 text-[11px] uppercase tracking-wider">
-                Voice intents
-              </div>
-              <div className="font-mono text-xl text-white">50+</div>
-            </div>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="mt-14 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+        >
+          <Chip label={t.hero.chip_latency} />
+          <Chip label={t.hero.chip_voice} />
+          <Chip label={t.hero.chip_offline} />
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function Chip({ label }: { label: string }) {
+  return (
+    <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-mono uppercase tracking-wider text-white/70 backdrop-blur">
+      <span className="h-1.5 w-1.5 rounded-full bg-brand-300" />
+      {label}
+    </span>
+  );
+}
+
+function PhoneTrio() {
+  const phones = [
+    { src: "/screenshots/s2.png", side: "left" as const },
+    { src: "/screenshots/s1.png", side: "center" as const },
+    { src: "/screenshots/s3.png", side: "right" as const },
+  ];
+
+  return (
+    <div className="relative mx-auto mt-16 flex h-[480px] sm:h-[600px] lg:h-[640px] items-end justify-center">
+      {phones.map((p, i) => {
+        const isCenter = p.side === "center";
+        const delay = isCenter ? 0.15 : 0.25 + i * 0.05;
+
+        const transform =
+          p.side === "left"
+            ? "translateX(calc(50% - 38%)) rotate(-7deg) scale(0.86)"
+            : p.side === "right"
+            ? "translateX(calc(-50% + 38%)) rotate(7deg) scale(0.86)"
+            : "translateX(-50%) rotate(0deg) scale(1)";
+
+        return (
+          <motion.div
+            key={p.src}
+            initial={{ opacity: 0, y: 48, scale: 0.92 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.65, delay, ease: [0.16, 1, 0.3, 1] }}
+            className={[
+              "absolute left-1/2 bottom-0",
+              p.side === "left" || p.side === "right"
+                ? "hidden sm:block"
+                : "",
+              isCenter ? "z-20" : "z-10",
+            ].join(" ")}
+            style={{
+              transformOrigin: "bottom center",
+              transform,
+            }}
+          >
+            <PhoneMockup
+              src={p.src}
+              size={isCenter ? "lg" : "md"}
+              priority={isCenter}
+            />
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+}
+
+function PhoneMockup({
+  src,
+  size,
+  priority,
+}: {
+  src: string;
+  size: "md" | "lg";
+  priority?: boolean;
+}) {
+  const w = size === "lg" ? "w-[240px] sm:w-[280px] lg:w-[320px]" : "w-[220px] lg:w-[260px]";
+  const glow =
+    size === "lg"
+      ? "shadow-[0_50px_140px_-20px_rgba(0,15,240,0.65)]"
+      : "shadow-[0_30px_90px_-15px_rgba(0,15,240,0.5)]";
+
+  return (
+    <div
+      className={[
+        "relative",
+        w,
+        "aspect-[9/19.5]",
+        "rounded-[42px] p-[10px]",
+        "bg-gradient-to-b from-[#1a1a2a] to-[#0a0a15]",
+        "ring-1 ring-white/10",
+        glow,
+      ].join(" ")}
+    >
+      <div className="absolute left-1/2 top-[14px] z-10 h-[22px] w-[90px] -translate-x-1/2 rounded-full bg-black" />
+      <div className="relative h-full w-full overflow-hidden rounded-[32px]">
+        <Image
+          src={src}
+          alt=""
+          fill
+          priority={priority}
+          sizes="(min-width:1024px) 320px, 260px"
+          className="object-cover"
+        />
+      </div>
+    </div>
   );
 }

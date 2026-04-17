@@ -1,9 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
-import { Ecosystem } from "@/components/Ecosystem";
 import { AppShowcase } from "@/components/AppShowcase";
-import { ForDevelopers } from "@/components/ForDevelopers";
+import { Download } from "@/components/Download";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -13,9 +12,8 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
-        <Ecosystem />
         <AppShowcase />
-        <ForDevelopers />
+        <Download />
       </main>
       <Footer />
     </>

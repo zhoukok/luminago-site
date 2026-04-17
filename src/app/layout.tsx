@@ -28,38 +28,35 @@ const SITE_URL = "https://luminago.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Lumina Go — See bigger. Control smarter.",
+    default: "Lumina Go — Put away the plastic remote.",
     template: "%s · Lumina Go",
   },
   description:
-    "The Bluetooth LE remote + voice assistant for WEMI and LYNCAST projectors. Alexa, Google Home and AI Smart Help built in. Free, offline-first, privacy by design.",
+    "The Bluetooth LE remote app for WEMI and LYNCAST projectors. 50+ voice commands, air mouse, full keyboard, touchpad and media keys — all over a direct BLE link. Free, offline, no ads.",
   applicationName: "Lumina Go",
-  authors: [
-    { name: "Chengdu Hotack Technology Co., Ltd.", url: SITE_URL },
-  ],
+  authors: [{ name: "Chengdu Hotack Technology Co., Ltd.", url: SITE_URL }],
   keywords: [
     "Lumina Go",
-    "WEMI",
-    "LYNCAST",
-    "projector remote",
+    "WEMI remote",
+    "LYNCAST remote",
+    "projector remote app",
     "Bluetooth LE remote",
-    "Alexa smart home",
-    "Google Home projector",
-    "air mouse",
+    "air mouse app",
     "voice control projector",
+    "BLE projector remote",
   ],
   openGraph: {
-    title: "Lumina Go — See bigger. Control smarter.",
+    title: "Lumina Go — Put away the plastic remote.",
     description:
-      "Bluetooth LE remote, voice assistant, Alexa & Google Home, AI Smart Help. Free, offline-first.",
+      "Bluetooth LE remote app for WEMI / LYNCAST projectors. 50+ voice commands, air mouse, full keyboard, media keys. Free, offline, no ads.",
     url: SITE_URL,
     siteName: "Lumina Go",
     images: [
       {
-        url: "/feature.png",
-        width: 1024,
-        height: 500,
-        alt: "Lumina Go — smart projector remote",
+        url: "/screenshots/s1.png",
+        width: 1080,
+        height: 2340,
+        alt: "Lumina Go — smart projector remote app",
       },
     ],
     locale: "en_US",
@@ -67,10 +64,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lumina Go — See bigger. Control smarter.",
+    title: "Lumina Go — Put away the plastic remote.",
     description:
-      "Bluetooth LE remote + voice assistant for WEMI / LYNCAST projectors.",
-    images: ["/feature.png"],
+      "Bluetooth LE remote app for WEMI / LYNCAST projectors. Voice, air mouse, keyboard, media keys — all free, all offline.",
+    images: ["/screenshots/s1.png"],
   },
   icons: {
     icon: [{ url: "/logo.png", type: "image/png" }],

@@ -9,33 +9,39 @@ export function Footer() {
 
   const product = [
     { label: t.footer.links.features, href: "#features" },
-    { label: t.footer.links.ecosystem, href: "#ecosystem" },
+    { label: t.footer.links.app, href: "#showcase" },
     { label: t.footer.links.download, href: "#download" },
   ];
-  const developer = [
-    { label: t.footer.links.github, href: "https://github.com/zhoukok", external: true },
-    { label: t.footer.links.docs, href: "https://docs.luminago.app", external: true },
-    { label: t.footer.links.status, href: "https://proxy.luminago.app/health", external: true },
-  ];
   const legal = [
-    { label: t.footer.links.privacy, href: "https://docs.luminago.app/privacy", external: true },
-    { label: t.footer.links.smart_home_privacy, href: "https://docs.luminago.app/smart-home-privacy", external: true },
-    { label: t.footer.links.alexa_privacy, href: "https://docs.luminago.app/alexa-privacy", external: true },
-  ];
-  const company = [
-    { label: t.footer.links.contact, href: "mailto:luminago@hotack.cn" },
+    {
+      label: t.footer.links.privacy,
+      href: "https://docs.luminago.app/privacy",
+      external: true,
+    },
+    {
+      label: t.footer.links.contact,
+      href: "mailto:luminago@hotack.cn",
+    },
   ];
 
   return (
-    <footer className="relative border-t border-white/10 bg-black/40 py-16 mt-8">
+    <footer className="relative border-t border-white/10 bg-black/40 py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-5">
+        <div className="grid gap-10 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5">
               <div className="relative h-9 w-9 overflow-hidden rounded-lg ring-1 ring-white/15">
-                <Image src="/logo.png" alt="Lumina Go" fill sizes="36px" className="object-cover" />
+                <Image
+                  src="/logo.png"
+                  alt="Lumina Go"
+                  fill
+                  sizes="36px"
+                  className="object-cover"
+                />
               </div>
-              <div className="text-lg font-semibold tracking-tight">Lumina Go</div>
+              <div className="text-lg font-semibold tracking-tight">
+                Lumina Go
+              </div>
             </div>
             <p className="mt-4 text-sm text-white/55 max-w-sm leading-relaxed">
               {t.footer.tagline}
@@ -49,20 +55,12 @@ export function Footer() {
           </div>
 
           <FooterCol title={t.footer.cols.product} items={product} />
-          <FooterCol title={t.footer.cols.developer} items={developer} />
           <FooterCol title={t.footer.cols.legal} items={legal} />
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <div>
             {t.footer.copyright} · {t.footer.company_zh}
-          </div>
-          <div className="flex gap-4">
-            {company.map((l) => (
-              <a key={l.label} href={l.href} className="hover:text-white/80 transition">
-                {l.label}
-              </a>
-            ))}
           </div>
         </div>
       </div>
