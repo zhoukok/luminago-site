@@ -64,10 +64,10 @@ export const en: Dict = {
       },
       {
         eyebrow: "Scenario 05 — Your projector has no voice",
-        title: "“‘Search Breaking Bad Season 3’ — if only.”",
+        title: "“‘Search Transformers’ — if only.”",
         desc: "Modern TVs ship with voice assistants. Most projectors don't — or they do, but only inside the maker's own apps. Lumina Go turns your phone into the voice remote your projector never had, using your phone's world-class speech stack and 50+ projector intents parsed on-device.",
         bullets: [
-          "“Open Netflix” · “Brightness 80%” · “Open Wi-Fi settings” · “Go home”",
+          "“Open Netflix” · “Volume up” · “Wi-Fi settings” · “Go home”",
           "Uses your phone's native speech recognition — no wake word needed",
           "Parsed locally — audio and transcripts never leave the phone",
         ],

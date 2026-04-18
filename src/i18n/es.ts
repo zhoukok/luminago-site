@@ -64,10 +64,10 @@ export const es: Dict = {
       },
       {
         eyebrow: "Escena 05 — Tu proyector no tiene voz",
-        title: "«Si pudiera decir «busca Breaking Bad temporada 3»...»",
+        title: "«Si pudiera decir «busca Transformers»...»",
         desc: "Los TV modernos traen asistente de voz de serie. Casi ningún proyector lo trae — y si lo trae, suele funcionar solo dentro de las apps propias. Lumina Go convierte tu móvil en ese mando de voz que el proyector nunca tuvo, usando el motor de voz del teléfono y 50+ intenciones analizadas en el dispositivo.",
         bullets: [
-          "«Abre Netflix» · «Brillo 80%» · «Ajustes Wi-Fi» · «Ir al inicio»",
+          "«Abre Netflix» · «Sube el volumen» · «Ajustes Wi-Fi» · «Ir al inicio»",
           "Usa el reconocimiento de voz nativo del móvil — sin palabra de activación",
           "Análisis local — audio y transcripciones no salen del teléfono",
         ],

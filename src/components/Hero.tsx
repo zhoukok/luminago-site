@@ -149,15 +149,13 @@ function PhoneMockup({
       className={[
         "relative",
         w,
-        "aspect-[9/19.5]",
-        "rounded-[42px] p-[10px]",
-        "bg-gradient-to-b from-[#1a1a2a] to-[#0a0a15]",
-        "ring-1 ring-white/10",
+        "aspect-[1242/2688]",
+        "rounded-[44px] p-[2px]",
+        "bg-[linear-gradient(135deg,#d8d8dd_0%,#8a8a92_22%,#c8c8cd_45%,#6a6a72_68%,#b8b8bd_100%)]",
         glow,
       ].join(" ")}
     >
-      <div className="absolute left-1/2 top-[14px] z-10 h-[22px] w-[90px] -translate-x-1/2 rounded-full bg-black" />
-      <div className="relative h-full w-full overflow-hidden rounded-[32px]">
+      <div className="relative h-full w-full overflow-hidden rounded-[42px] bg-black ring-1 ring-inset ring-white/10">
         <Image
           src={src}
           alt=""

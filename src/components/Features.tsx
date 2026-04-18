@@ -268,29 +268,21 @@ function PhoneFrame({
       ? "w-[180px] sm:w-[200px] lg:w-[220px]"
       : "w-[240px] sm:w-[260px] lg:w-[300px]";
   return (
-    <div className="relative">
-      <div
-        className={
-          "relative mx-auto aspect-[9/19.5] overflow-hidden rounded-[42px] border border-white/15 bg-black p-[6px] shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)] ring-1 ring-white/5 " +
-          sizeClasses
-        }
-      >
-        <div className="relative h-full w-full overflow-hidden rounded-[36px]">
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            sizes="(min-width:1024px) 300px, 260px"
-            className="object-cover"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.08] via-transparent to-black/30"
-          />
-        </div>
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[14px] h-[18px] w-[80px] -translate-x-1/2 rounded-full bg-black/90 ring-1 ring-white/10"
+    <div
+      className={
+        "relative mx-auto aspect-[1242/2688] rounded-[42px] p-[2px] " +
+        "bg-[linear-gradient(135deg,#d8d8dd_0%,#8a8a92_22%,#c8c8cd_45%,#6a6a72_68%,#b8b8bd_100%)] " +
+        "shadow-[0_40px_100px_-20px_rgba(0,15,240,0.55)] " +
+        sizeClasses
+      }
+    >
+      <div className="relative h-full w-full overflow-hidden rounded-[40px] bg-black ring-1 ring-inset ring-white/10">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(min-width:1024px) 300px, 260px"
+          className="object-cover"
         />
       </div>
     </div>
@@ -307,13 +299,9 @@ function DualPhones({
   alt: string;
 }) {
   return (
-    <div className="relative flex items-center justify-center pr-4 pl-4 sm:pr-8 sm:pl-8">
-      <div className="relative -mr-6 sm:-mr-10 translate-y-2 -rotate-[6deg]">
-        <PhoneFrame src={srcA} alt={alt + " — touchpad"} size="small" />
-      </div>
-      <div className="relative z-10 -translate-y-2 rotate-[6deg]">
-        <PhoneFrame src={srcB} alt={alt + " — air mouse"} size="small" />
-      </div>
+    <div className="relative flex items-center justify-center gap-4 sm:gap-6">
+      <PhoneFrame src={srcA} alt={alt + " — touchpad"} size="small" />
+      <PhoneFrame src={srcB} alt={alt + " — air mouse"} size="small" />
     </div>
   );
 }
@@ -388,25 +376,21 @@ function ChatBubble({
 
 function ThemeCard() {
   return (
-    <div className="relative flex items-center justify-center pr-4 pl-4 sm:pr-8 sm:pl-8">
+    <div className="relative flex items-center justify-center gap-4 sm:gap-6">
       <div
         aria-hidden
         className="pointer-events-none absolute -inset-10 -z-10 rounded-[48px] bg-brand-500/10 blur-3xl"
       />
-      <div className="relative -mr-6 sm:-mr-10 translate-y-2 -rotate-[6deg]">
-        <ThemePhone
-          variant="light"
-          src="/screenshots/s1-light.png"
-          alt="Remote page, Day theme"
-        />
-      </div>
-      <div className="relative z-10 -translate-y-2 rotate-[6deg]">
-        <ThemePhone
-          variant="dark"
-          src="/screenshots/s1.png"
-          alt="Remote page, Night theme"
-        />
-      </div>
+      <ThemePhone
+        variant="light"
+        src="/screenshots/s1-light.png"
+        alt="Remote page, Day theme"
+      />
+      <ThemePhone
+        variant="dark"
+        src="/screenshots/s1.png"
+        alt="Remote page, Night theme"
+      />
     </div>
   );
 }
