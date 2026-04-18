@@ -116,8 +116,7 @@ export const en: Dict = {
     free_note: "Free · No ads · No tracking · Works offline",
   },
   footer: {
-    tagline:
-      "The smart remote for your projector — made in Chengdu, shipped worldwide.",
+    tagline: "The last missing piece of your projector.",
     cols: {
       product: "Product",
       legal: "Legal",

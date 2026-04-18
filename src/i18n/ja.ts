@@ -116,7 +116,7 @@ export const ja: Dict = {
     free_note: "完全無料 · 広告なし · 追跡なし · オフライン対応",
   },
   footer: {
-    tagline: "あなたのプロジェクターのためのスマートリモコン——成都発、世界へ。",
+    tagline: "プロジェクターの、最後のピース。",
     cols: {
       product: "プロダクト",
       legal: "法務",

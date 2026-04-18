@@ -116,8 +116,7 @@ export const es: Dict = {
     free_note: "Gratis · Sin anuncios · Sin rastreo · Funciona offline",
   },
   footer: {
-    tagline:
-      "El mando inteligente para tu proyector — hecho en Chengdu, entregado al mundo.",
+    tagline: "La última pieza de tu proyector.",
     cols: {
       product: "Producto",
       legal: "Legal",

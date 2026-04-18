@@ -116,7 +116,7 @@ export const zh: Dict = {
     free_note: "完全免费 · 无广告 · 不追踪 · 离线可用",
   },
   footer: {
-    tagline: "为您的投影仪打造的智能遥控器 —— 成都制造，面向全球。",
+    tagline: "投影仪的最后一块拼图。",
     cols: {
       product: "产品",
       legal: "法务",

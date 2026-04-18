@@ -5,7 +5,7 @@ import { ScanLine } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import { useLanguage } from "@/components/LanguageProvider";
 
-const IOS_URL = "https://apps.apple.com/app/lumina-go";
+const IOS_URL = "https://apps.apple.com/cn/app/lumina-go/id6761456385";
 const ANDROID_URL =
   "https://play.google.com/store/apps/details?id=com.htc.btremote.remote";
 
@@ -124,8 +124,8 @@ function StoreCard({
             marginSize={0}
             imageSettings={{
               src: "/logo.png",
-              height: 28,
-              width: 28,
+              height: 38,
+              width: 38,
               excavate: true,
             }}
           />
