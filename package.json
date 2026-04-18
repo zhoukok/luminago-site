@@ -2,19 +2,21 @@
   "name": "luminago-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Lumina Go — official marketing site (Next.js on Vercel at luminago.app)",
+  "description": "Lumina Go — official marketing site (Next.js static export, deployed to Cloudflare Workers Static Assets at luminago.app).",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && wrangler deploy",
+    "cf:dev": "next build && wrangler dev",
+    "cf:tail": "wrangler tail"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.474.0",
     "next": "^15.1.6",
-    "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0"
@@ -28,6 +30,7 @@
     "eslint-config-next": "^15.1.6",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "wrangler": "^4.83.0"
   }
 }

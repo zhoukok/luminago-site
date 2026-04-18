@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 
 const BASE = "https://luminago.app";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [

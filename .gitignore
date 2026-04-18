@@ -34,5 +34,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# vercel
+# vercel (legacy, not currently used)
 .vercel/
+
+# cloudflare wrangler state
+.wrangler/
+

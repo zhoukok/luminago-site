@@ -1,0 +1,23 @@
+name = "luminago-site"
+compatibility_date = "2025-04-01"
+
+# 自定义域：
+# - luminago.app     → 根域（官网品牌入口）
+# - www.luminago.app → 同站（保留 www 别名）
+# `custom_domain = true` 让 wrangler 自动在 Cloudflare 上建立 DNS 记录
+# 并签发 SSL，无需手动配置 A / CNAME。
+routes = [
+  { pattern = "luminago.app", custom_domain = true },
+  { pattern = "www.luminago.app", custom_domain = true }
+]
+
+# Workers Static Assets —— 直接服务 Next.js `next build` 产出的 out/ 目录
+# html_handling = "drop-trailing-slash"：
+#   /         → 200 serve out/index.html
+#   /foo/     → 302 → /foo     （统一无尾斜杠）
+#   /foo      → 200 serve out/foo.html
+# 这套模式与 docs-site 保持一致，便于后续统一管理。
+[assets]
+directory = "./out"
+html_handling = "drop-trailing-slash"
+not_found_handling = "404-page"
