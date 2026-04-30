@@ -1,4 +1,13 @@
-export type Lang = "en" | "zh" | "ja" | "es";
+export type Lang =
+  | "en"
+  | "zh"
+  | "zh-Hant"
+  | "ja"
+  | "ko"
+  | "es"
+  | "pt"
+  | "fr"
+  | "it";
 
 export interface Dict {
   nav: {
