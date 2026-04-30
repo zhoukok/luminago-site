@@ -4,10 +4,18 @@ export type Lang =
   | "zh-Hant"
   | "ja"
   | "ko"
+  | "de"
+  | "fr"
+  | "it"
   | "es"
   | "pt"
-  | "fr"
-  | "it";
+  | "ru"
+  | "tr"
+  | "ar"
+  | "hi"
+  | "id"
+  | "vi"
+  | "th";
 
 export interface Dict {
   nav: {

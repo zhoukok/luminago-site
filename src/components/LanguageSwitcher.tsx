@@ -34,7 +34,7 @@ export function LanguageSwitcher() {
         <span>{current.label}</span>
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 w-40 max-h-[70vh] overflow-y-auto rounded-xl border border-white/10 bg-ink-soft/95 backdrop-blur-xl shadow-2xl">
+        <div className="absolute end-0 mt-2 w-48 max-h-[70vh] overflow-y-auto rounded-xl border border-white/10 bg-ink-soft/95 backdrop-blur-xl shadow-2xl">
           {LANGS.map((l) => (
             <button
               key={l.code}
