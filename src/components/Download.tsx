@@ -6,8 +6,9 @@ import { QRCodeSVG } from "qrcode.react";
 import { useLanguage } from "@/components/LanguageProvider";
 
 const IOS_URL = "https://apps.apple.com/cn/app/lumina-go/id6761456385";
+// Live on Play Store since 2026-04-30 (com.lumina.go)
 const ANDROID_URL =
-  "https://play.google.com/store/apps/details?id=com.htc.btremote.remote";
+  "https://play.google.com/store/apps/details?id=com.lumina.go";
 
 export function Download() {
   const { t } = useLanguage();
@@ -45,7 +46,6 @@ export function Download() {
             subtitle={t.download.android_subtitle}
             scanHint={t.download.android_scan_hint}
             url={ANDROID_URL}
-            comingSoonLabel={t.download.coming_soon}
           />
         </div>
 
@@ -70,9 +70,14 @@ function StoreCard({
   subtitle: string;
   scanHint: string;
   url: string;
+  /**
+   * If provided, the card is rendered in "coming soon" state — non-clickable,
+   * grayscale, with the label badge in the top-right corner. Both stores are
+   * live as of 2026-04-30, so leaving this undefined yields the live state.
+   */
   comingSoonLabel?: string;
 }) {
-  const isComingSoon = brand === "android";
+  const isComingSoon = comingSoonLabel !== undefined;
 
   return (
     <motion.div

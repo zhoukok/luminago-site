@@ -112,7 +112,6 @@ export const vi: Dict = {
     android_title: "Tải trên Google Play",
     android_subtitle: "Cần Android 10 trở lên",
     android_scan_hint: "Quét bằng camera",
-    coming_soon: "Sắp ra mắt",
     free_note: "Miễn phí · không quảng cáo · không theo dõi · hoạt động ngoại tuyến",
   },
   footer: {

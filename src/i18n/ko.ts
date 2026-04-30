@@ -112,7 +112,6 @@ export const ko: Dict = {
     android_title: "Google Play에서 받기",
     android_subtitle: "Android 10 이상 필요",
     android_scan_hint: "카메라로 스캔",
-    coming_soon: "곧 출시",
     free_note: "완전 무료 · 광고 없음 · 추적 없음 · 오프라인 동작",
   },
   footer: {

@@ -60,7 +60,6 @@ export interface Dict {
     android_title: string;
     android_subtitle: string;
     android_scan_hint: string;
-    coming_soon: string;
     free_note: string;
   };
   footer: {

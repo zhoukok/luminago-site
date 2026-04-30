@@ -112,7 +112,6 @@ export const ru: Dict = {
     android_title: "Скачать в Google Play",
     android_subtitle: "Требуется Android 10 или новее",
     android_scan_hint: "Сканируйте камерой",
-    coming_soon: "Скоро",
     free_note: "Бесплатно · без рекламы · без отслеживания · работает офлайн",
   },
   footer: {

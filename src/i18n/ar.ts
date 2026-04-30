@@ -112,7 +112,6 @@ export const ar: Dict = {
     android_title: "احصل عليه من Google Play",
     android_subtitle: "يتطلب Android 10 أو أحدث",
     android_scan_hint: "امسح بالكاميرا",
-    coming_soon: "قريباً",
     free_note: "مجاني · بلا إعلانات · بلا تتبع · يعمل دون اتصال",
   },
   footer: {

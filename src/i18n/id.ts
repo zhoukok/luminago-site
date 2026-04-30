@@ -112,7 +112,6 @@ export const id: Dict = {
     android_title: "Dapatkan di Google Play",
     android_subtitle: "Memerlukan Android 10 atau yang lebih baru",
     android_scan_hint: "Pindai dengan kamera",
-    coming_soon: "Segera hadir",
     free_note: "Gratis · tanpa iklan · tanpa pelacakan · bekerja offline",
   },
   footer: {

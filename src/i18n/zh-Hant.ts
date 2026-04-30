@@ -112,7 +112,6 @@ export const zhHant: Dict = {
     android_title: "Google Play 下載",
     android_subtitle: "需 Android 10 或更新",
     android_scan_hint: "用相機掃碼",
-    coming_soon: "即將上架",
     free_note: "完全免費 · 無廣告 · 不追蹤 · 離線可用",
   },
   footer: {

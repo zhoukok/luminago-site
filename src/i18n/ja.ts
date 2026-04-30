@@ -112,7 +112,6 @@ export const ja: Dict = {
     android_title: "Google Play 版",
     android_subtitle: "Android 10 以降",
     android_scan_hint: "カメラで読み取り",
-    coming_soon: "近日公開",
     free_note: "完全無料 · 広告なし · 追跡なし · オフライン対応",
   },
   footer: {

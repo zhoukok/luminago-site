@@ -112,7 +112,6 @@ export const tr: Dict = {
     android_title: "Google Play'den al",
     android_subtitle: "Android 10 veya üzeri gerekir",
     android_scan_hint: "Kameranızla tarayın",
-    coming_soon: "Yakında",
     free_note: "Ücretsiz · reklamsız · izleme yok · çevrimdışı çalışır",
   },
   footer: {

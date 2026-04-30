@@ -112,7 +112,6 @@ export const it: Dict = {
     android_title: "Scarica su Google Play",
     android_subtitle: "Richiede Android 10 o successivo",
     android_scan_hint: "Scansiona con la fotocamera",
-    coming_soon: "In arrivo",
     free_note: "Gratuita · Niente pubblicità · Niente tracciamento · Funziona offline",
   },
   footer: {

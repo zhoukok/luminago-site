@@ -112,7 +112,6 @@ export const hi: Dict = {
     android_title: "Google Play से लें",
     android_subtitle: "Android 10 या नया चाहिए",
     android_scan_hint: "कैमरे से स्कैन करें",
-    coming_soon: "जल्द आ रहा है",
     free_note: "मुफ़्त · ऐड-फ़्री · ट्रैकिंग नहीं · ऑफ़लाइन काम करता है",
   },
   footer: {

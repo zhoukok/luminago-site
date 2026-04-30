@@ -32,23 +32,25 @@ export const metadata: Metadata = {
     template: "%s · Lumina Go",
   },
   description:
-    "The Bluetooth LE remote app for WEMI and LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice and text-to-device — six modes in one app, all over a direct BLE link. Free, offline, no ads.",
+    "The Bluetooth LE remote app for HOTACK projectors (including WEMI and LYNCAST). Remote, keyboard, touchpad, air mouse, voice and text-to-device — six modes in one app, all over a direct BLE link. Built-in AI Assistant. Free on App Store and Google Play, offline, no ads.",
   applicationName: "Lumina Go",
   authors: [{ name: "Chengdu Hotack Technology Co., Ltd.", url: SITE_URL }],
   keywords: [
     "Lumina Go",
+    "HOTACK projector remote",
     "WEMI remote",
     "LYNCAST remote",
     "projector remote app",
     "Bluetooth LE remote",
+    "BLE projector remote",
     "air mouse app",
     "voice control projector",
-    "BLE projector remote",
+    "AI projector assistant",
   ],
   openGraph: {
     title: "Lumina Go — The last missing piece of your projector.",
     description:
-      "Bluetooth LE remote app for WEMI / LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice and text — six modes, all over direct BLE. Free, offline, no ads.",
+      "Bluetooth LE remote app for HOTACK projectors (WEMI, LYNCAST and more). Remote, keyboard, touchpad, air mouse, voice and text — six modes, all over direct BLE, with a built-in AI Assistant. Free on App Store and Google Play.",
     url: SITE_URL,
     siteName: "Lumina Go",
     images: [
@@ -66,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lumina Go — The last missing piece of your projector.",
     description:
-      "Bluetooth LE remote app for WEMI / LYNCAST projectors. Remote, keyboard, touchpad, air mouse, voice and text — all free, all offline.",
+      "BLE remote for HOTACK projectors (WEMI, LYNCAST and more). Six modes — remote, keyboard, touchpad, air mouse, voice, text — and a built-in AI Assistant. Free, offline, no ads.",
     images: ["/screenshots/s1.png"],
   },
   icons: {

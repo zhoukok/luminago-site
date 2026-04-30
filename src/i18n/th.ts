@@ -112,7 +112,6 @@ export const th: Dict = {
     android_title: "ดาวน์โหลดบน Google Play",
     android_subtitle: "ต้องใช้ Android 10 ขึ้นไป",
     android_scan_hint: "สแกนด้วยกล้อง",
-    coming_soon: "เร็ว ๆ นี้",
     free_note: "ฟรี · ไม่มีโฆษณา · ไม่ติดตาม · ใช้ออฟไลน์ได้",
   },
   footer: {

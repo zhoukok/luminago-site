@@ -112,7 +112,6 @@ export const zh: Dict = {
     android_title: "Google Play 下载",
     android_subtitle: "需 Android 10 或更新",
     android_scan_hint: "用相机扫码",
-    coming_soon: "即将上架",
     free_note: "完全免费 · 无广告 · 不追踪 · 离线可用",
   },
   footer: {
