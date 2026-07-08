@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Go - Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 15px;
+            color: #495057;
+            margin-bottom: 6px;
+        }
+        .effective-date {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 28px;
+        }
+        .notice {
+            background: #eef4ff;
+            border-left: 4px solid #4285f4;
+            padding: 14px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #1a1a2e;
+            margin-bottom: 28px;
+        }
+        .notice a { color: #4285f4; }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        p { margin-bottom: 14px; }
+        ul {
+            margin: 8px 0 14px 24px;
+            list-style: disc;
+        }
+        li { margin-bottom: 6px; }
+        a { color: #4285f4; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            background: #e9ecef;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            font-size: 14px;
+        }
+        table th, table td {
+            border: 1px solid #dee2e6;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        table th {
+            background: #f1f3f5;
+            font-weight: 600;
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        .lang-switcher a {
+            margin-left: 12px;
+            padding: 4px 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            color: #495057;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .lang-switcher a:hover, .lang-switcher a.active {
+            background: #4285f4;
+            color: #fff;
+            border-color: #4285f4;
+        }
+        .section { display: none; }
+        .section.active { display: block; }
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #dee2e6;
+            font-size: 13px;
+            color: #6c757d;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a onclick="switchLang('en')" id="btn-en" class="active">English</a>
+            <a onclick="switchLang('zh')" id="btn-zh">中文</a>
+            <a onclick="switchLang('ja')" id="btn-ja">日本語</a>
+        </div>
+
+        <!-- ============================ English ============================ -->
+        <div id="lang-en" class="section active">
+            <h1>Lumina Go Privacy Policy</h1>
+            <p class="effective-date">Effective date: April 18, 2026</p>
+
+            <h2>Applicable Devices</h2>
+            <p>Lumina Go is the projector platform service brand by <strong>Chengdu Hotack Technology Co., Ltd.</strong> ("Hotack"), providing unified remote control, voice control, smart-home integration for projector brands manufactured by Hotack — including WEMI, LYNCAST, and future brands. This Privacy Policy applies to all Hotack-branded projector devices connected through the Lumina Go app or its cloud services.</p>
+
+            <h2>Companion TV App: Lumina Go Receiver</h2>
+            <p>This policy also covers <strong>Lumina Go Receiver</strong> (package <code>com.htc.btremote.receiver.gtv</code>), the companion app that runs on Google TV / Android TV devices and receives remote-control commands from the Lumina Go phone app.</p>
+            <ul>
+                <li><strong>Zero data collection.</strong> The receiver declares <strong>no internet permission</strong>, so it is technically unable to collect, store or upload any personal data. Remote commands arrive over an encrypted Bluetooth LE link, are executed immediately on the TV, and are never persisted.</li>
+                <li><strong>Accessibility service.</strong> The receiver uses an Android accessibility service solely to perform the navigation, click and media actions you send from your own phone. It does not read, record or transmit screen content, and can be disabled at any time in the TV's Settings.</li>
+                <li><strong>Input method (keyboard) service.</strong> Text typed on your phone is committed into the focused field on the TV. No keystrokes are logged, stored or transmitted.</li>
+            </ul>
+
+            <h2>1. Information We Collect</h2>
+            <p>The app's <strong>core remote-control functions</strong> use Bluetooth Low Energy (BLE) between your phone and a paired projector — no internet required. <strong>Optional features</strong> (FAQ, Streaming Search) require internet; data flows are detailed below.</p>
+            <table>
+                <thead>
+                    <tr><th>Data / Capability</th><th>Purpose</th><th>Uploaded?</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Bluetooth</strong></td><td>Discover and connect to the projector's BLE GATT service; send navigation, touchpad, keyboard, and text commands.</td><td>No</td></tr>
+                    <tr><td><strong>Microphone</strong></td><td>Voice control: on-device speech recognition.</td><td>No (fully local)</td></tr>
+                    <tr><td><strong>Motion Sensors</strong></td><td>Air Mouse: accelerometer + gyroscope.</td><td>No</td></tr>
+                    <tr><td><strong>Internet (Streaming Search)</strong></td><td>Query available sources on Netflix, Disney+, YouTube, Prime Video.</td><td>Only keyword + region</td></tr>
+                    <tr><td><strong>Internet (FAQ)</strong></td><td>Load FAQ JSON.</td><td>No</td></tr>
+                    <tr><td><strong>UserDefaults / local storage</strong></td><td>In-app preferences, touchpad speed.</td><td>No</td></tr>
+                </tbody>
+            </table>
+
+            <h2>2. Data Storage</h2>
+            <p>All remote-control, voice, and air-mouse data is processed and stored <strong>locally on your device only</strong>. Streaming Search sends only the content you explicitly enter (keywords) to our proxy, and nothing else. We do not operate user accounts and do not store your personal profile.</p>
+
+            <h2>3. Third-Party Services</h2>
+            <ul>
+                <li><strong>Streaming Availability API</strong> (by Movie of the Night) — streaming-platform availability data. Only title and region are shared.</li>
+                <li><strong>GitHub, Inc.</strong> — hosts the FAQ static JSON; only anonymous HTTP requests are transmitted.</li>
+            </ul>
+            <p>We do not sell, rent, or share your personal information with third parties beyond what is strictly required by the features above.</p>
+
+            <h2>4. Permissions Required</h2>
+            <ul>
+                <li><strong>Bluetooth</strong>: required to discover and communicate with your projector.</li>
+                <li><strong>Microphone</strong> (optional): required for voice control. Audio is processed entirely on-device.</li>
+                <li><strong>Motion &amp; Fitness</strong> (optional): required for Air Mouse. Data is processed locally.</li>
+                <li><strong>Location (Android 11 and below only)</strong>: required by the OS to perform BLE scanning. Not used for any other purpose.</li>
+                <li><strong>Internet</strong> (optional): required for Streaming Search and FAQ updates.</li>
+            </ul>
+
+            <h2>5. Children's Privacy</h2>
+            <p>The app is not directed at children under 13. If you believe we have collected a child's data in error, contact us using the email below.</p>
+
+            <h2>6. Your Rights</h2>
+            <p>You may at any time:</p>
+            <ul>
+                <li>Revoke any permission through device settings (revoking Bluetooth disables projector connection; revoking internet disables streaming search and FAQ updates).</li>
+                <li>Email <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a> to request manual deletion of any remaining data; we respond within 7 business days.</li>
+            </ul>
+
+            <h2>7. Changes to This Policy</h2>
+            <p>We may update this policy from time to time. Any changes will be reflected in the app update and on this page.</p>
+
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this policy, please contact us at <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+
+        <!-- ============================ 中文 ============================ -->
+        <div id="lang-zh" class="section">
+            <h1>Lumina Go 隐私协议</h1>
+            <p class="effective-date">生效日期：2026 年 4 月 18 日</p>
+
+            <h2>适用设备范围</h2>
+            <p>Lumina Go 是<strong>成都市和天创科技股份有限公司</strong>（以下简称"Hotack"）旗下的投影仪平台服务品牌，为 Hotack 公司出品的投影仪硬件品牌（包括 WEMI、LYNCAST，以及未来推出的其他品牌）统一提供遥控、语音控制、智能家居接入等服务。本隐私政策适用于所有通过 Lumina Go App 连接或调用云服务的 Hotack 品牌投影仪设备。</p>
+
+            <h2>配套 TV 应用：Lumina Go 接收端</h2>
+            <p>本政策同样适用于 <strong>Lumina Go Receiver</strong>（包名 <code>com.htc.btremote.receiver.gtv</code>）——运行在 Google TV / Android TV 上、接收 Lumina Go 手机 App 遥控指令的配套应用。</p>
+            <ul>
+                <li><strong>零数据收集。</strong>接收端<strong>不声明任何联网权限</strong>，在技术上无法收集、存储或上传任何个人数据。遥控指令经加密的低功耗蓝牙链路到达后在电视上即时执行，不做任何留存。</li>
+                <li><strong>无障碍服务。</strong>接收端使用 Android 无障碍服务，仅用于执行你从自己手机发出的导航、点击与媒体操作；不读取、不记录、不传输屏幕内容，可随时在电视设置中关闭。</li>
+                <li><strong>输入法（键盘）服务。</strong>手机上输入的文字直接提交到电视当前输入框，不记录、不存储、不传输任何按键内容。</li>
+            </ul>
+
+            <h2>1. 我们收集的信息</h2>
+            <p>本应用的<strong>核心遥控功能</strong>通过蓝牙低功耗（BLE）在您的手机与已配对的投影仪之间收发指令，无需联网。<strong>可选的 FAQ 功能</strong>需要联网；<strong>片源搜索</strong>仅通过蓝牙将影片名称发送到投影仪本机处理，不联网。数据流向见下表。</p>
+            <table>
+                <thead>
+                    <tr><th>数据 / 能力</th><th>用途</th><th>是否上传</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>蓝牙</strong></td><td>扫描、连接投影仪端的 BLE 接收服务，发送按键、触摸板、键盘与文本等指令。</td><td>否</td></tr>
+                    <tr><td><strong>麦克风</strong></td><td>语音控制：在设备端进行语音识别。</td><td>否（完全本地）</td></tr>
+                    <tr><td><strong>运动传感器</strong></td><td>空中飞鼠：使用加速计与陀螺仪。</td><td>否</td></tr>
+                    <tr><td><strong>片源搜索</strong></td><td>将影片名称通过蓝牙发送到投影仪，由投影仪端应用搜索并播放。</td><td>否（仅发送到投影仪）</td></tr>
+                    <tr><td><strong>网络（FAQ）</strong></td><td>加载 FAQ 知识库 JSON。</td><td>否</td></tr>
+                    <tr><td><strong>UserDefaults / 本地存储</strong></td><td>界面偏好、触摸板灵敏度。</td><td>否</td></tr>
+                </tbody>
+            </table>
+
+            <h2>2. 数据存储</h2>
+            <p>所有遥控、语音、飞鼠相关的数据<strong>仅在您的设备本地处理和存储</strong>。片源搜索通过蓝牙发送到投影仪本机处理，不上传服务器。我们不提供用户账号，不存储您的个人资料。</p>
+
+            <h2>3. 第三方服务</h2>
+            <ul>
+                <li><strong>GitHub, Inc.</strong>：托管 FAQ 静态 JSON，仅传输匿名的 HTTP 请求。</li>
+            </ul>
+            <p>除上述功能严格所需的协作方外，我们不向任何其它第三方出售、出租或共享您的个人信息。</p>
+
+            <h2>4. 所需权限</h2>
+            <ul>
+                <li><strong>蓝牙：</strong>用于发现投影仪并与其通信。</li>
+                <li><strong>麦克风</strong>（可选）：语音控制所需，音频完全在设备端处理。</li>
+                <li><strong>运动与健身</strong>（可选）：空中飞鼠所需，数据本地处理。</li>
+                <li><strong>位置（仅 Android 11 及以下）：</strong>操作系统执行 BLE 扫描所需，不用于其他任何目的。</li>
+                <li><strong>网络</strong>（可选）：FAQ 内容更新所需。</li>
+            </ul>
+
+            <h2>5. 儿童隐私</h2>
+            <p>本应用不面向 13 岁以下儿童收集个人信息。若您为家长并认为我们误收集了儿童信息，请通过下方邮箱联系我们。</p>
+
+            <h2>6. 您的权利</h2>
+            <ul>
+                <li>随时通过设备设置撤销任何权限（撤销蓝牙将无法连接投影仪；撤销网络将禁用 FAQ 内容更新）。</li>
+                <li>通过邮件 <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a> 申请人工删除任何残留数据，我们将在 7 个工作日内响应。</li>
+            </ul>
+
+            <h2>7. 政策变更</h2>
+            <p>我们可能会不时更新本协议，任何变更将在应用更新和本页面体现。</p>
+
+            <h2>8. 联系我们</h2>
+            <p>如果您对本协议有任何疑问，请联系 <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a></p>
+
+            <footer>&copy; 2026 Lumina Go. 保留所有权利。</footer>
+        </div>
+
+        <!-- ============================ 日本語 ============================ -->
+        <div id="lang-ja" class="section">
+            <h1>Lumina Go プライバシーポリシー</h1>
+            <p class="effective-date">施行日：2026 年 4 月 18 日</p>
+
+            <h2>対応デバイス範囲</h2>
+            <p>Lumina Go は、<strong>成都市和天創科技股份有限公司</strong>（以下「Hotack」）のプロジェクター プラットフォーム サービス ブランドであり、Hotack が製造するプロジェクター ブランド（WEMI、LYNCAST、および将来のブランドを含む）に対して、リモコン操作、音声制御、スマート ホーム連携などのサービスを統一的に提供します。本ポリシーは Lumina Go アプリまたは関連クラウド サービスに接続する全ての Hotack ブランド プロジェクターに適用されます。</p>
+
+            <h2>コンパニオン TV アプリ：Lumina Go Receiver</h2>
+            <p>本ポリシーは <strong>Lumina Go Receiver</strong>（パッケージ <code>com.htc.btremote.receiver.gtv</code>）にも適用されます。これは Google TV / Android TV 上で動作し、Lumina Go スマートフォン アプリからのリモコン コマンドを受信するコンパニオン アプリです。</p>
+            <ul>
+                <li><strong>データ収集ゼロ。</strong>レシーバーは<strong>インターネット権限を一切宣言しておらず</strong>、個人データの収集・保存・送信は技術的に不可能です。リモコン コマンドは暗号化された Bluetooth LE リンク経由で届き、テレビ上で即時実行され、保存されません。</li>
+                <li><strong>ユーザー補助（アクセシビリティ）サービス。</strong>ご自身のスマートフォンから送信したナビゲーション・クリック・メディア操作を実行するためだけに使用します。画面内容の読み取り・記録・送信は行わず、テレビの設定からいつでも無効化できます。</li>
+                <li><strong>入力方法（キーボード）サービス。</strong>スマートフォンで入力したテキストをテレビのフォーカス中の入力欄に反映するだけで、キー入力の記録・保存・送信は行いません。</li>
+            </ul>
+
+            <h2>1. 収集する情報</h2>
+            <p>本アプリの<strong>主なリモコン機能</strong>は Bluetooth Low Energy（BLE）で動作し、インターネット接続は不要です。<strong>オプション機能</strong>（FAQ、配信検索）はインターネットが必要で、データ フローは以下のとおりです。</p>
+            <table>
+                <thead>
+                    <tr><th>データ / 機能</th><th>用途</th><th>送信有無</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Bluetooth</strong></td><td>プロジェクターの検出・通信（ナビ・音量・テキスト等の送信）。</td><td>なし</td></tr>
+                    <tr><td><strong>マイク</strong></td><td>音声制御：デバイス内音声認識。</td><td>なし（完全ローカル）</td></tr>
+                    <tr><td><strong>モーション センサー</strong></td><td>エアマウス：加速度計・ジャイロスコープ。</td><td>なし</td></tr>
+                    <tr><td><strong>インターネット（配信検索）</strong></td><td>Netflix、Disney+、YouTube、Prime Video の利用可能性を検索。</td><td>キーワードと地域のみ</td></tr>
+                    <tr><td><strong>インターネット（FAQ）</strong></td><td>FAQ JSON を読み込み。</td><td>なし</td></tr>
+                    <tr><td><strong>UserDefaults / ローカル ストレージ</strong></td><td>アプリ内設定。</td><td>なし</td></tr>
+                </tbody>
+            </table>
+
+            <h2>2. データ保存</h2>
+            <p>リモコン、音声、エアマウス関連のデータはすべて<strong>お使いのデバイス内でのみ処理・保存</strong>されます。配信検索はユーザーが入力した内容（キーワード）のみを当社プロキシに送信し、他のデータは送信しません。ユーザー アカウント機能は提供せず、個人プロフィールを保存することもありません。</p>
+
+            <h2>3. 第三者サービス</h2>
+            <ul>
+                <li><strong>Streaming Availability API</strong>（Movie of the Night 提供）：配信プラットフォーム可用性データ。タイトルと地域のみ共有。</li>
+                <li><strong>GitHub, Inc.</strong>：FAQ 静的 JSON をホスト。匿名 HTTP リクエストのみ送信。</li>
+            </ul>
+            <p>上記機能で厳密に必要な協力事業者以外への販売・貸与・共有は行いません。</p>
+
+            <h2>4. 必要な権限</h2>
+            <ul>
+                <li><strong>Bluetooth：</strong>プロジェクターの検出・通信に必要。</li>
+                <li><strong>マイク</strong>（任意）：音声制御に必要。デバイス内で処理。</li>
+                <li><strong>モーションと フィットネス</strong>（任意）：エアマウスに必要。ローカル処理。</li>
+                <li><strong>位置情報（Android 11 以下のみ）：</strong>OS が BLE スキャンを行うために要求。他の目的には使用しません。</li>
+                <li><strong>インターネット</strong>（任意）：配信検索と FAQ 更新に必要。</li>
+            </ul>
+
+            <h2>5. 子どものプライバシー</h2>
+            <p>本アプリは 13 歳未満のお子様を対象とした情報収集は行いません。お子様のデータが誤って収集されたと思われる場合は下記メールまでご連絡ください。</p>
+
+            <h2>6. お客様の権利</h2>
+            <ul>
+                <li>デバイス設定からいつでも権限を取り消せます（Bluetooth を取り消すと接続不可；インターネットを取り消すと配信検索と FAQ 更新が無効化）。</li>
+                <li>残存データの人手削除をご希望の場合は <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a> までご連絡ください（7 営業日以内に対応）。</li>
+            </ul>
+
+            <h2>7. ポリシーの変更</h2>
+            <p>本ポリシーは随時更新される場合があります。変更はアプリの更新と本ページに反映されます。</p>
+
+            <h2>8. お問い合わせ</h2>
+            <p>本ポリシーに関するご質問は <a href="mailto:luminago@hotack.cn">luminago@hotack.cn</a> までご連絡ください。</p>
+
+            <footer>&copy; 2026 Lumina Go. All rights reserved.</footer>
+        </div>
+    </div>
+
+    <script>
+    function switchLang(code) {
+        var langs = ['en', 'zh', 'ja'];
+        for (var i = 0; i < langs.length; i++) {
+            var sec = document.getElementById('lang-' + langs[i]);
+            var btn = document.getElementById('btn-' + langs[i]);
+            if (langs[i] === code) {
+                sec.classList.add('active');
+                btn.classList.add('active');
+            } else {
+                sec.classList.remove('active');
+                btn.classList.remove('active');
+            }
+        }
+        document.documentElement.lang = (code === 'zh' ? 'zh-CN' : (code === 'ja' ? 'ja' : 'en'));
+    }
+
+    (function() {
+        var nav = (navigator.language || 'en').toLowerCase();
+        if (nav.indexOf('zh') === 0) switchLang('zh');
+        else if (nav.indexOf('ja') === 0) switchLang('ja');
+    })();
+    </script>
+</body>
+</html>
