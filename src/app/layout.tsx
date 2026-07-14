@@ -83,6 +83,60 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+// 结构化数据(Schema.org JSON-LD):让 Google 富结果与 AI 搜索准确识别
+// "这是什么 App / 谁做的 / 什么平台 / 免费 / 官方链接"。不含未经真实数据支撑的评分。
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#org`,
+      name: "Chengdu Hotack Technology Co., Ltd.",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Lumina Go",
+      inLanguage: "en",
+      publisher: { "@id": `${SITE_URL}/#org` },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${SITE_URL}/#app`,
+      name: "Lumina Go",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "iOS, Android",
+      url: SITE_URL,
+      image: `${SITE_URL}/logo.png`,
+      description:
+        "Bluetooth LE remote app for HOTACK projectors (including WEMI and LYNCAST). Six control modes in one app — remote, keyboard, touchpad, air mouse, voice and text — over a direct BLE link, fully offline, with a built-in AI Assistant. Free, no ads.",
+      downloadUrl: [
+        "https://apps.apple.com/app/id6761456385",
+        "https://play.google.com/store/apps/details?id=com.lumina.go",
+      ],
+      installUrl: [
+        "https://apps.apple.com/app/id6761456385",
+        "https://play.google.com/store/apps/details?id=com.lumina.go",
+      ],
+      featureList: [
+        "D-pad remote with OK and projector keys",
+        "Full keyboard",
+        "Touchpad",
+        "Air mouse",
+        "Voice control (50+ on-device commands)",
+        "Text send to projector",
+        "AI projector assistant",
+      ],
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      author: { "@id": `${SITE_URL}/#org` },
+      publisher: { "@id": `${SITE_URL}/#org` },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -94,6 +148,10 @@ export default function RootLayout({
       className={`${inter.variable} ${notoSC.variable} ${jetbrains.variable}`}
     >
       <body className="min-h-screen font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
