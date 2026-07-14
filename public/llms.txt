@@ -1,0 +1,20 @@
+# Lumina Go
+
+> Lumina Go is a free, ad-free Bluetooth LE (BLE) remote app that turns your phone into a full remote for HOTACK projectors (including the WEMI and LYNCAST lines). Six control modes in one app — remote, keyboard, touchpad, air mouse, voice and text — over a single direct BLE link. It works fully offline (BLE-only core), with sub-20 ms latency at up to 10 m and 50+ voice commands. Available for Android and iOS.
+
+## Main
+- [Lumina Go — official site](https://luminago.app/): Product overview, the six control modes, and the real-world scenarios each one solves.
+- [Download](https://luminago.app/#download): Get the app for Android (Google Play) and iOS (App Store).
+- [Features](https://luminago.app/#features): The six control modes — D-pad remote, keyboard, touchpad, air mouse, voice, and text send.
+
+## Docs
+- [Privacy Policy](https://docs.luminago.app/privacy): How Lumina Go handles data — BLE-only offline core; networking used only for optional help/AI and content updates.
+
+## Key facts
+- Compatible projectors: HOTACK series, including WEMI and LYNCAST.
+- Connection: direct Bluetooth LE, no account, no pairing ritual, works offline.
+- Control modes: remote (4-way D-pad + OK, power/mute/source/cast/brightness/zoom/volume), full keyboard, touchpad, air mouse, voice (50+ commands), and text send.
+- Price: free, no ads.
+
+## Sitemap
+- [Sitemap](https://luminago.app/sitemap.xml): All indexable URLs for luminago.app.
